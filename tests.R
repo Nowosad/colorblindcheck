@@ -47,3 +47,17 @@ four_plot(x = rcartocolor::carto_pal(7, "Sunset"))
 four_plot(x = rcartocolor::carto_pal(11, "Safe"))
 four_plot(x = rcartocolor::carto_pal(7, "Earth"))
 
+
+x = rcartocolor::carto_pal(11, "Vivid")
+deu = colorspace::deutan(x)
+pro = colorspace::protan(x)
+tri = colorspace::tritan(x)
+
+spacesXYZ::DeltaE(as(hex2RGB(x), "LAB")@coords, as(hex2RGB(deu), "LAB")@coords)
+
+a = as(hex2RGB(x), "LAB")@coords
+
+
+a_list = lapply(as.list(1:dim(a)[1]), function(x) a[x[1],])
+
+lapply(a_list, spacesXYZ::DeltaE, as(hex2RGB(deu), "LAB")@coords)
