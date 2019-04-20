@@ -47,7 +47,6 @@ four_plot(x = rcartocolor::carto_pal(7, "Sunset"))
 four_plot(x = rcartocolor::carto_pal(11, "Safe"))
 four_plot(x = rcartocolor::carto_pal(7, "Earth"))
 
-
 x = rcartocolor::carto_pal(11, "Vivid")
 deu = colorspace::deutan(x)
 pro = colorspace::protan(x)
@@ -64,8 +63,14 @@ b_list = lapply(as.list(1:dim(b)[1]), function(x) b[x[1],])
 a_output = lapply(a_list, spacesXYZ::DeltaE, as(hex2RGB(x), "LAB")@coords)
 b_output = lapply(b_list, spacesXYZ::DeltaE, as(hex2RGB(deu), "LAB")@coords)
 
-
 a_output = do.call(rbind, a_output)
 b_output = do.call(rbind, b_output)
 
-a_output / b_output
+a_output[lower.tri(a_output, diag = TRUE)] = NA
+b_output[lower.tri(b_output, diag = TRUE)] = NA
+sum(a_output, na.rm = TRUE)
+sum(b_output, na.rm = TRUE)
+
+c_output = a_output / b_output
+c_output[lower.tri(c_output, diag = TRUE)] = NA
+sum(c_output, na.rm = TRUE)
