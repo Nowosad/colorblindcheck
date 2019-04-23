@@ -42,26 +42,27 @@ four_plot = function(x){
   )
 }
 
-four_plot(x = rcartocolor::carto_pal(11, "Vivid"))
+
 four_plot(x = rcartocolor::carto_pal(7, "Sunset"))
 four_plot(x = rcartocolor::carto_pal(11, "Safe"))
 four_plot(x = rcartocolor::carto_pal(7, "Earth"))
+four_plot(x = rcartocolor::carto_pal(11, "Vivid"))
 
 x = rcartocolor::carto_pal(11, "Vivid")
 deu = colorspace::deutan(x)
 pro = colorspace::protan(x)
 tri = colorspace::tritan(x)
 
-spacesXYZ::DeltaE(as(hex2RGB(x), "LAB")@coords, as(hex2RGB(deu), "LAB")@coords)
+spacesXYZ::DeltaE(as(colorspace::hex2RGB(x), "LAB")@coords, as(colorspace::hex2RGB(deu), "LAB")@coords)
 
-a = as(hex2RGB(x), "LAB")@coords
-a_list = lapply(as.list(1:dim(a)[1]), function(x) a[x[1],])
+a = as(colorspace::hex2RGB(x), "LAB")@coords
+a_list = lapply(as.list(1:dim(a)[1]), function(x) a[x[1], ])
 
-b = as(hex2RGB(deu), "LAB")@coords
-b_list = lapply(as.list(1:dim(b)[1]), function(x) b[x[1],])
+b = as(colorspace::hex2RGB(deu), "LAB")@coords
+b_list = lapply(as.list(1:dim(b)[1]), function(x) b[x[1], ])
 
-a_output = lapply(a_list, spacesXYZ::DeltaE, as(hex2RGB(x), "LAB")@coords)
-b_output = lapply(b_list, spacesXYZ::DeltaE, as(hex2RGB(deu), "LAB")@coords)
+a_output = lapply(a_list, spacesXYZ::DeltaE, as(colorspace::hex2RGB(x), "LAB")@coords)
+b_output = lapply(b_list, spacesXYZ::DeltaE, as(colorspace::hex2RGB(deu), "LAB")@coords)
 
 a_output = do.call(rbind, a_output)
 b_output = do.call(rbind, b_output)
@@ -74,3 +75,22 @@ sum(b_output, na.rm = TRUE)
 c_output = a_output / b_output
 c_output[lower.tri(c_output, diag = TRUE)] = NA
 sum(c_output, na.rm = TRUE)
+
+# number of colors
+nc = length(x)
+nc
+
+# number of color pairs
+ncp = length(x) * (length(x) - 1) / 2
+ncp
+
+# difference threshold
+min_a = min(a_output, na.rm = TRUE)
+
+# number of differentiable color pairs 
+# deuteranopia
+ncp - sum(b_output < min_a, na.rm = TRUE)
+
+# protanopia
+
+# tritanopia
