@@ -86,6 +86,7 @@ ncp
 
 # difference threshold
 min_a = min(a_output, na.rm = TRUE)
+min_a
 
 # number of differentiable color pairs 
 # deuteranopia
