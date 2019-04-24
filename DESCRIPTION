@@ -1,5 +1,5 @@
 Package: colorblindcheck
-Title: What the Package Does (One Line, Title Case)
+Title: Check Color Palletes for Problems with Color Vision Deficiency
 Version: 0.0.0.9000
 Authors@R: c(
            person(given = "Jakub", 
