@@ -1,15 +1,12 @@
 Package: colorblindcheck
 Title: Check Color Palletes for Problems with Color Vision Deficiency
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
            person(given = "Jakub", 
            family = "Nowosad", 
            role = c("aut", "cre"),
            email = "nowosad.jakub@gmail.com", 
-           comment = c(ORCID = "0000-0002-1057-3721")),
-           person("Kirill", "Müller", email = "krlmlr+r@mailbox.org", role = "ctb", comment = "the spark_bar function"),
-           person("Hadley", "Wickham", email = "hadley@rstudio.com", role = "ctb", comment = "the spark_bar function"),
-           person(family = "RStudio, Inc.", role = "cph", comment = "the spark_bar function")
+           comment = c(ORCID = "0000-0002-1057-3721"))
            )
 Description: What the package does (one paragraph).
 Imports: 
