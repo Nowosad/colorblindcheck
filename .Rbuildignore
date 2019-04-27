@@ -3,3 +3,6 @@
 ^LICENSE\.md$
 ^colorblindcheck\.Rproj$
 ^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
