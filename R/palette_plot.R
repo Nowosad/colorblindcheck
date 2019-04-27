@@ -49,7 +49,7 @@ palette_plot = function(x){
     )
   }
   text(
-    rep(-0.1, n_colors),
+    rep(0, n_colors),
     (1:n_colors) - 0.6,
     labels = c("Tritanopia", "Protanopia", "Deuteranopia", "Normal"),
     xpd = TRUE,
