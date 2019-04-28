@@ -9,6 +9,14 @@
 Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
         It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Nowosad/colorblindcheck}
+  \item Report bugs at \url{https://github.com/Nowosad/colorblindcheck/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jakub Nowosad \email{nowosad.jakub@gmail.com} (0000-0002-1057-3721)
 
