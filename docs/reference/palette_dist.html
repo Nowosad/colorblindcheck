@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Title — palette_dist • colorblindcheck</title>
+<title>Distance Between Colors — palette_dist • colorblindcheck</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,10 @@
 
 
 
-<meta property="og:title" content="Title — palette_dist" />
+<meta property="og:title" content="Distance Between Colors — palette_dist" />
 
-<meta property="og:description" content="Title" />
+<meta property="og:description" content="Calculation of the distances between the colors in the input palette.
+It also allows for calculation of the distances between the colors in a simulations of the  color vision deficiency - deuteranopia, protanopia, and tritanopia." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -63,7 +64,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">colorblindcheck</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -77,6 +78,21 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/articles/check_rcartocolor.html">Checking rcartocolor for colorblind friendly palettes</a>
+    </li>
+    <li>
+      <a href="../articles/intro-to-colorblindcheck.html">colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency</a>
+    </li>
+  </ul>
 </li>
       </ul>
       
@@ -94,97 +110,144 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Title</h1>
+    <h1>Distance Between Colors</h1>
     
     <div class="hidden name"><code>palette_dist.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Title</p>
+    <p>Calculation of the distances between the colors in the input palette.
+It also allows for calculation of the distances between the colors in a simulations of the  color vision deficiency - deuteranopia, protanopia, and tritanopia.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>palette_dist</span>(<span class='no'>x</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='fl'>1976</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>palette_dist</span>(<span class='no'>x</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>severity</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='fl'>2000</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td></td>
+      <td><p>A vector of hexadecimal color descriptions</p></td>
     </tr>
     <tr>
       <th>cvd</th>
-      <td></td>
+      <td><p>A type of color vision deficiency (CVD): "pro" (protanomaly), "deu" (deutanomaly), or "tri" (tritanomaly)</p></td>
+    </tr>
+    <tr>
+      <th>severity</th>
+      <td><p>Severity of the color vision defect, a number between 0 and 1</p></td>
     </tr>
     <tr>
       <th>metric</th>
-      <td><p>a vector of color metric specifiers. Valid values are '1976','1994', and '2000', which refer to the year the metric  was recommended by the CIE.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td></td>
+      <td><p>A vector of color metric specifiers. Valid values are '1976', '1994', and '2000' (default), which refer to the year the metric  was recommended by the CIE</p></td>
     </tr>
     </table>
     
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A matrix of distances between the original input palette and a simulation of the  selected color vision deficiency - deuteranopia, protanopia, and tritanopia</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='kw pkg'>rcartocolor</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal'>carto_pal</a></span>(<span class='fl'>11</span>, <span class='st'>"Vivid"</span>)
-<span class='fu'>palette_dist</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;       [,1]     [,2]     [,3]      [,4]      [,5]     [,6]      [,7]      [,8]
-#&gt;  [1,]   NA 112.1452 93.80488  66.62121  95.53507 92.72133  21.81716 113.94958
-#&gt;  [2,]   NA       NA 71.51211 114.41428  42.00653 58.88816 112.68941  23.70800
-#&gt;  [3,]   NA       NA       NA  55.41071  93.47016 25.62704  80.35233  52.98692
-#&gt;  [4,]   NA       NA       NA        NA 120.81523 66.19626  45.51149 102.51032
-#&gt;  [5,]   NA       NA       NA        NA        NA 84.17780 103.29757  60.91863
-#&gt;  [6,]   NA       NA       NA        NA        NA       NA  83.04191  44.13692
-#&gt;  [7,]   NA       NA       NA        NA        NA       NA        NA 109.90779
-#&gt;  [8,]   NA       NA       NA        NA        NA       NA        NA        NA
-#&gt;  [9,]   NA       NA       NA        NA        NA       NA        NA        NA
-#&gt; [10,]   NA       NA       NA        NA        NA       NA        NA        NA
-#&gt; [11,]   NA       NA       NA        NA        NA       NA        NA        NA
-#&gt;            [,9]    [,10]    [,11]
-#&gt;  [1,] 110.44388 44.15669 70.74542
-#&gt;  [2,]  19.05738 82.28644 56.63849
-#&gt;  [3,]  86.29529 94.03924 32.11526
-#&gt;  [4,] 123.38284 92.78044 59.30281
-#&gt;  [5,]  28.88862 55.06589 65.91353
-#&gt;  [6,]  72.42910 88.00761 33.82600
-#&gt;  [7,] 114.65986 58.73863 63.27981
-#&gt;  [8,]  42.54332 91.82885 47.95562
-#&gt;  [9,]        NA 75.20687 66.03326
-#&gt; [10,]        NA       NA 62.74994
-#&gt; [11,]        NA       NA       NA</div><div class='input'><span class='fu'>palette_dist</span>(<span class='no'>x</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='st'>"deu"</span>)</div><div class='output co'>#&gt;       [,1]     [,2]     [,3]      [,4]     [,5]     [,6]       [,7]       [,8]
-#&gt;  [1,]   NA 110.0817 73.37796  15.31794 93.00174 80.65494   7.272803 114.760549
-#&gt;  [2,]   NA       NA 41.30961 101.76387 19.24709 33.56079 113.436980   7.174455
-#&gt;  [3,]   NA       NA       NA  62.77108 22.13368 24.16636  75.499685  44.867504
-#&gt;  [4,]   NA       NA       NA        NA 83.70220 73.58635  13.661111 106.008294
-#&gt;  [5,]   NA       NA       NA        NA       NA 21.55531  95.866474  23.170317
-#&gt;  [6,]   NA       NA       NA        NA       NA       NA  84.593336  39.998266
-#&gt;  [7,]   NA       NA       NA        NA       NA       NA         NA 117.863938
-#&gt;  [8,]   NA       NA       NA        NA       NA       NA         NA         NA
-#&gt;  [9,]   NA       NA       NA        NA       NA       NA         NA         NA
-#&gt; [10,]   NA       NA       NA        NA       NA       NA         NA         NA
-#&gt; [11,]   NA       NA       NA        NA       NA       NA         NA         NA
-#&gt;             [,9]    [,10]    [,11]
-#&gt;  [1,] 108.434657 41.81510 61.14867
-#&gt;  [2,]   5.712302 69.98089 53.97568
-#&gt;  [3,]  41.527590 33.73474 13.04357
-#&gt;  [4,] 100.678946 33.89144 49.93704
-#&gt;  [5,]  20.020820 52.54319 34.96747
-#&gt;  [6,]  30.420141 39.91116 31.96960
-#&gt;  [7,] 112.077215 45.08202 62.87362
-#&gt;  [8,]  12.601692 74.99935 57.65305
-#&gt;  [9,]         NA 68.27338 53.85778
-#&gt; [10,]         NA       NA 23.31983
-#&gt; [11,]         NA       NA       NA</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='no'>rainbow_pal</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/grDevices/topics/palettes'>rainbow</a></span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>7</span>)
+<span class='no'>rainbow_pal</span></div><div class='output co'>#&gt; [1] "#FF0000FF" "#FFDB00FF" "#49FF00FF" "#00FF92FF" "#0092FFFF" "#4900FFFF"
+#&gt; [7] "#FF00DBFF"</div><div class='input'><span class='fu'>palette_dist</span>(<span class='no'>rainbow_pal</span>)</div><div class='output co'>#&gt;      [,1]     [,2]     [,3]     [,4]     [,5]     [,6]      [,7]
+#&gt; [1,]   NA 52.96503 85.06611 84.19100 52.61836 51.46782  39.46279
+#&gt; [2,]   NA       NA 29.34232 34.74051 65.68745 92.04784  80.83188
+#&gt; [3,]   NA       NA       NA 12.13226 69.12782 81.23889 107.63470
+#&gt; [4,]   NA       NA       NA       NA 56.87222 74.19228 103.11485
+#&gt; [5,]   NA       NA       NA       NA       NA 35.47760  44.20031
+#&gt; [6,]   NA       NA       NA       NA       NA       NA  29.94683
+#&gt; [7,]   NA       NA       NA       NA       NA       NA        NA</div><div class='input'><span class='fu'>palette_dist</span>(<span class='no'>rainbow_pal</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='st'>"deu"</span>)</div><div class='output co'>#&gt;      [,1]     [,2]      [,3]     [,4]     [,5]     [,6]     [,7]
+#&gt; [1,]   NA 51.39677 46.855266 42.46564 58.52225 61.19252 55.57508
+#&gt; [2,]   NA       NA  7.725825 24.53764 75.63546 91.56339 80.29220
+#&gt; [3,]   NA       NA        NA 22.32611 69.93759 84.60113 74.34244
+#&gt; [4,]   NA       NA        NA       NA 47.89305 62.25387 53.37699
+#&gt; [5,]   NA       NA        NA       NA       NA 19.47525 11.33209
+#&gt; [6,]   NA       NA        NA       NA       NA       NA 11.16315
+#&gt; [7,]   NA       NA        NA       NA       NA       NA       NA</div><div class='input'>
+<span class='no'>x</span> <span class='kw'>=</span> <span class='kw pkg'>rcartocolor</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal'>carto_pal</a></span>(<span class='fl'>11</span>, <span class='st'>"Vivid"</span>)
+<span class='fu'>palette_dist</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;       [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]
+#&gt;  [1,]   NA 52.04523 45.55534 39.23473 49.36807 46.51876 13.35131 49.85537
+#&gt;  [2,]   NA       NA 40.72139 61.23713 25.88310 31.39848 57.69268 17.19956
+#&gt;  [3,]   NA       NA       NA 23.92105 47.23524 22.12769 37.65264 31.46811
+#&gt;  [4,]   NA       NA       NA       NA 75.06609 36.10532 25.61009 57.81051
+#&gt;  [5,]   NA       NA       NA       NA       NA 42.17333 58.54488 42.47789
+#&gt;  [6,]   NA       NA       NA       NA       NA       NA 42.99029 26.57736
+#&gt;  [7,]   NA       NA       NA       NA       NA       NA       NA 57.46444
+#&gt;  [8,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt;  [9,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt; [10,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt; [11,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt;           [,9]    [,10]    [,11]
+#&gt;  [1,] 55.63423 25.37443 28.70389
+#&gt;  [2,] 12.84607 39.85479 37.74876
+#&gt;  [3,] 48.18521 58.75860 19.09441
+#&gt;  [4,] 77.24506 59.66097 21.99773
+#&gt;  [5,] 19.96106 26.17096 40.25210
+#&gt;  [6,] 36.19023 54.84155 27.32743
+#&gt;  [7,] 63.70692 36.47136 24.75022
+#&gt;  [8,] 30.90223 48.02986 32.30888
+#&gt;  [9,]       NA 37.95881 46.10770
+#&gt; [10,]       NA       NA 34.03568
+#&gt; [11,]       NA       NA       NA</div><div class='input'><span class='fu'>palette_dist</span>(<span class='no'>x</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='st'>"pro"</span>, <span class='kw'>severity</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt;       [,1]     [,2]     [,3]     [,4]      [,5]     [,6]      [,7]      [,8]
+#&gt;  [1,]   NA 52.48196 25.11561 14.77268 50.197647 27.73398  8.180249 50.211156
+#&gt;  [2,]   NA       NA 35.44649 57.93880  2.784295 23.31238 55.779740  8.708812
+#&gt;  [3,]   NA       NA       NA 22.72090 32.791477 22.57092 23.661929 30.299207
+#&gt;  [4,]   NA       NA       NA       NA 55.102581 35.95804  6.935274 53.568400
+#&gt;  [5,]   NA       NA       NA       NA        NA 22.20630 53.152056  6.168612
+#&gt;  [6,]   NA       NA       NA       NA        NA       NA 32.502060 24.535526
+#&gt;  [7,]   NA       NA       NA       NA        NA       NA        NA 52.270175
+#&gt;  [8,]   NA       NA       NA       NA        NA       NA        NA        NA
+#&gt;  [9,]   NA       NA       NA       NA        NA       NA        NA        NA
+#&gt; [10,]   NA       NA       NA       NA        NA       NA        NA        NA
+#&gt; [11,]   NA       NA       NA       NA        NA       NA        NA        NA
+#&gt;            [,9]    [,10]     [,11]
+#&gt;  [1,] 55.621129 19.95530 23.176527
+#&gt;  [2,]  7.311807 36.21265 36.166575
+#&gt;  [3,] 41.654967 21.03491  2.467907
+#&gt;  [4,] 63.015709 29.17376 21.698042
+#&gt;  [5,]  9.936065 34.61957 33.569262
+#&gt;  [6,] 24.740536 10.65344 21.386683
+#&gt;  [7,] 60.200475 25.32213 22.177921
+#&gt;  [8,] 16.501685 35.96684 31.484004
+#&gt;  [9,]        NA 38.00344 42.022920
+#&gt; [10,]        NA       NA 18.974359
+#&gt; [11,]        NA       NA        NA</div><div class='input'><span class='fu'>palette_dist</span>(<span class='no'>x</span>, <span class='kw'>cvd</span> <span class='kw'>=</span> <span class='st'>"pro"</span>, <span class='kw'>severity</span> <span class='kw'>=</span> <span class='fl'>0.2</span>)</div><div class='output co'>#&gt;       [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]
+#&gt;  [1,]   NA 52.20713 39.53495 29.46635 51.12549 41.78917 10.55805 49.17448
+#&gt;  [2,]   NA       NA 37.49313 62.02816 19.78175 28.31784 57.19803 13.35525
+#&gt;  [3,]   NA       NA       NA 25.69001 39.24148 22.28508 34.87817 30.31760
+#&gt;  [4,]   NA       NA       NA       NA 68.07764 37.75698 19.46303 59.18465
+#&gt;  [5,]   NA       NA       NA       NA       NA 34.13492 57.79657 30.94296
+#&gt;  [6,]   NA       NA       NA       NA       NA       NA 41.45967 25.80445
+#&gt;  [7,]   NA       NA       NA       NA       NA       NA       NA 51.47508
+#&gt;  [8,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt;  [9,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt; [10,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt; [11,]   NA       NA       NA       NA       NA       NA       NA       NA
+#&gt;           [,9]    [,10]    [,11]
+#&gt;  [1,] 56.21115 24.49188 26.16532
+#&gt;  [2,] 10.00157 37.01528 37.82102
+#&gt;  [3,] 43.96795 47.48796 17.37075
+#&gt;  [4,] 71.89308 47.51948 21.05439
+#&gt;  [5,] 16.85920 28.41884 38.52096
+#&gt;  [6,] 31.15593 44.22339 27.13749
+#&gt;  [7,] 62.79654 32.69802 23.68717
+#&gt;  [8,] 23.68762 41.28681 33.35172
+#&gt;  [9,]       NA 36.72867 45.12635
+#&gt; [10,]       NA       NA 30.16259
+#&gt; [11,]       NA       NA       NA</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-            
+      
+      <li><a href="#value">Value</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 

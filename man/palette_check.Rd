@@ -11,7 +11,7 @@ palette_check(x, tolerance = NULL, plot = FALSE, severity = 1, ...)
 
 \item{tolerance}{The minimal value of acceptable difference between the colors to distinguish between them. As the default, minimal distance between colors in the original input palette is given.}
 
-\item{plot}{If TRUE, display a plot comparing the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia}
+\item{plot}{If TRUE, display a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia}
 
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
 
@@ -30,10 +30,10 @@ A data.frame with 4 observations and 8 variables:
 \item max_dist: maximal distance between colors
 }
 
-Additionally, a plot comparing the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia can be shown.
+Additionally, a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia can be shown.
 }
 \description{
-Comparision of the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia.
+Comparision of the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 }
 \examples{
 rainbow_pal = rainbow(n = 7)

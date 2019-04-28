@@ -1,5 +1,5 @@
 ---
-title: "Check rcartocolor"
+title: "Checking rcartocolor for colorblind friendly palettes"
 author: "Jakub Nowosad"
 date: "`r Sys.Date()`"
 output: 

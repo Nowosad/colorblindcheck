@@ -12,7 +12,7 @@ palette_plot(x, severity = 1)
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
 }
 \description{
-Plot of the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia.
+Plot of the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 }
 \examples{
 rainbow_pal = rainbow(n = 7)

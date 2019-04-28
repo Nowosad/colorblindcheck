@@ -4,9 +4,10 @@
 \name{colorblindcheck-package}
 \alias{colorblindcheck}
 \alias{colorblindcheck-package}
-\title{colorblindcheck: Check Color Palletes for Problems with Color Vision Deficiency}
+\title{colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency}
 \description{
-What the package does (one paragraph).
+Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
+        It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies.
 }
 \author{
 \strong{Maintainer}: Jakub Nowosad \email{nowosad.jakub@gmail.com} (0000-0002-1057-3721)
