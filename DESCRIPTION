@@ -19,7 +19,8 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    covr
+    covr,
+    vdiffr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
