@@ -6,3 +6,5 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^data-raw$
+^vignettes/articles$

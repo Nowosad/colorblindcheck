@@ -1,0 +1,97 @@
+---
+title: "Check rcartocolor"
+author: "Jakub Nowosad"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+      toc: true
+number_sections: true
+vignette: >
+  %\VignetteIndexEntry{check_rcartocolor}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 5
+)
+```
+
+```{r setup}
+library(colorblindcheck)
+library(RColorBrewer)
+```
+
+# Quantitative
+
+```{r}
+display.brewer.all(type = "seq", colorblindFriendly = TRUE)
+display.brewer.all(type = "seq", colorblindFriendly = FALSE)
+```
+
+# Divergence
+
+```{r}
+display.brewer.all(type = "div", colorblindFriendly = TRUE)
+display.brewer.all(type = "div", colorblindFriendly = FALSE)
+```
+
+# Qualitative
+
+```{r}
+display.brewer.all(type = "qual", colorblindFriendly = TRUE)
+display.brewer.all(type = "qual", colorblindFriendly = FALSE)
+```
+
+## Set1
+
+```{r}
+Set1 = brewer.pal(7, "Set1")
+colorblindcheck::palette_check(Set1, plot = TRUE)
+```
+
+## Set2
+
+```{r}
+Set2 = brewer.pal(7, "Set2")
+colorblindcheck::palette_check(Set2, plot = TRUE)
+```
+
+## Paired
+
+```{r}
+Paired = brewer.pal(7, "Paired")
+colorblindcheck::palette_check(Paired, plot = TRUE)
+```
+
+## Dark2
+
+```{r}
+Dark2 = brewer.pal(7, "Dark2")
+colorblindcheck::palette_check(Dark2, plot = TRUE)
+```
+
+## RdYlBu
+
+```{r}
+RdYlBu = brewer.pal(7, "RdYlBu")
+colorblindcheck::palette_check(RdYlBu, plot = TRUE)
+```
+
+## PRGn
+
+```{r}
+PRGn = brewer.pal(7, "PRGn")
+colorblindcheck::palette_check(PRGn, plot = TRUE)
+```
+
+## BrBG
+
+```{r}
+BrBG = brewer.pal(7, "BrBG")
+colorblindcheck::palette_check(BrBG, plot = TRUE)
+```

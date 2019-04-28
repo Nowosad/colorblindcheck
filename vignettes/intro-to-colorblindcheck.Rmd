@@ -1,19 +1,20 @@
 ---
-output: github_document
+title: "colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency"
+author: "Jakub Nowosad"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro-to-colorblindcheck}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
-# colorblindcheck
-[![Travis build status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
 
 Deciding if a color palette is a colorblind friendly is a hard task.
 This cannot be done in an entirely automatic fashion, as the decision needs to be confirmed by visual judgments.
@@ -24,20 +25,6 @@ The goal of **colorblindcheck** is to provide tools to decide if the selected co
 - `palette_check()` - Creating summary statistics comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 
 The work in this package was inspired by a blog post [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/) by [Gregor Aisch](https://twitter.com/driven_by_data).
-
-## Installation
-
-You can install the released version of colorblindcheck from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("colorblindcheck")
-```
-
-You can install the development version of **colorblindcheck** from [GitHub](https://github.com/Nowosad/colorblindcheck) with:
-
-```r
-remotes::install_github("nowosad/colorblindcheck")
-```
 
 ## Example
 
@@ -52,7 +39,7 @@ rainbow_pal
 
 The primary function in this package is `palette_check()`, which creates a summary comparison between the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 
-```{r}
+```{r, fig.width=6}
 palette_check(rainbow_pal, plot = TRUE)
 ```
 
@@ -83,10 +70,3 @@ palette_dist(rainbow_pal)
 # deuteranopia
 palette_dist(rainbow_pal, cvd = "pro")
 ```
-
-## References
-
-- [Datawrapper now checks your colors, so you don’t have to](https://blog.datawrapper.de/colorblind-check/)
-- [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works ](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
-- [Color Vision Deficiency Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
-- [Delta E: The Color Difference](http://www.colorwiki.com/wiki/Delta_E:_The_Color_Difference)
