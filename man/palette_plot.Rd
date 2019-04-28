@@ -2,17 +2,23 @@
 % Please edit documentation in R/palette_plot.R
 \name{palette_plot}
 \alias{palette_plot}
-\title{Title}
+\title{Plot Palette And Its Color Vision Deficiencies}
 \usage{
-palette_plot(x)
+palette_plot(x, severity = 1)
 }
 \arguments{
-\item{x}{}
+\item{x}{A vector of hexadecimal color descriptions}
+
+\item{severity}{Severity of the color vision defect, a number between 0 and 1}
 }
 \description{
-Title
+Plot of the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia.
 }
 \examples{
+rainbow_pal = rainbow(n = 7)
+rainbow_pal
+palette_plot(rainbow_pal)
+
 palette_plot(x = rcartocolor::carto_pal(7, "Sunset"))
 palette_plot(x = rcartocolor::carto_pal(11, "Safe"))
 palette_plot(x = rcartocolor::carto_pal(7, "Earth"))

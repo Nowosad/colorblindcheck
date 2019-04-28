@@ -2,23 +2,48 @@
 % Please edit documentation in R/palette_check.R
 \name{palette_check}
 \alias{palette_check}
-\title{Title}
+\title{Compare Palette with Color Vision Deficiencies}
 \usage{
-palette_check(x, tolerance = NULL, ...)
+palette_check(x, tolerance = NULL, plot = FALSE, severity = 1, ...)
 }
 \arguments{
-\item{x}{}
+\item{x}{A vector of hexadecimal color descriptions}
 
-\item{tolerance}{}
+\item{tolerance}{The minimal value of acceptable difference between the colors to distinguish between them. As the default, minimal distance between colors in the original input palette is given.}
 
-\item{...}{}
+\item{plot}{If TRUE, display a plot comparing the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia}
+
+\item{severity}{Severity of the color vision defect, a number between 0 and 1}
+
+\item{...}{Other arguments passed on to \code{\link[=palette_dist]{palette_dist()}} to control the color metric}
+}
+\value{
+A data.frame with 4 observations and 8 variables:
+\itemize{
+\item name: orginal input color palette (normal), deuteranopia, protanopia, and tritanopia
+\item n: number of colors
+\item tolerance: minimal value of acceptable difference between the colors to distinguish between them
+\item ncp: number of color pairs
+\item ndcp: number of differentiable color pairs (color pairs with distances above the tolerance value)
+\item min_dist: minimal distance between colors
+\item mean_dist: average distance between colors
+\item max_dist: maximal distance between colors
+}
+
+Additionally, a plot comparing the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia can be shown.
 }
 \description{
-Title
+Comparision of the original input palette and simulations of color vision deficiences - deuteranopia, protanopia, and tritanopia.
 }
 \examples{
+rainbow_pal = rainbow(n = 7)
+rainbow_pal
+palette_check(rainbow_pal, plot = TRUE)
+
 x = rcartocolor::carto_pal(11, "Vivid")
 palette_check(x)
+palette_check(x, plot = TRUE)
 palette_check(x, tolerance = 1)
-palette_check(x, tolerance = 10, metric = 2000)
+palette_check(x, tolerance = 10, metric = 1976)
+palette_check(x, plot = TRUE, severity = 0.5)
 }

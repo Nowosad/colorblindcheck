@@ -2,25 +2,35 @@
 % Please edit documentation in R/palette_dist.R
 \name{palette_dist}
 \alias{palette_dist}
-\title{Title}
+\title{Distance Between Colors}
 \usage{
-palette_dist(x, cvd = NULL, metric = 1976, ...)
+palette_dist(x, cvd = NULL, severity = 1, metric = 2000)
 }
 \arguments{
-\item{x}{}
+\item{x}{A vector of hexadecimal color descriptions}
 
-\item{cvd}{}
+\item{cvd}{A type of color vision deficiency (CVD): "pro" (protanomaly), "deu" (deutanomaly), or "tri" (tritanomaly)}
 
-\item{metric}{a vector of color metric specifiers. Valid values are '1976','1994', and '2000', which refer to the year the metric  was recommended by the CIE.}
+\item{severity}{Severity of the color vision defect, a number between 0 and 1}
 
-\item{...}{}
+\item{metric}{A vector of color metric specifiers. Valid values are '1976', '1994', and '2000' (default), which refer to the year the metric  was recommended by the CIE}
+}
+\value{
+A matrix of distances between the original input palette and a simulation of the  selected color vision deficiency - deuteranopia, protanopia, and tritanopia
 }
 \description{
-Title
+Calculation of the distances between the colors in the input palette.
+It also allows for calculation of the distances between the colors in a simulations of the  color vision deficiency - deuteranopia, protanopia, and tritanopia.
 }
 \examples{
+rainbow_pal = rainbow(n = 7)
+rainbow_pal
+palette_dist(rainbow_pal)
+palette_dist(rainbow_pal, cvd = "deu")
+
 x = rcartocolor::carto_pal(11, "Vivid")
 palette_dist(x)
-palette_dist(x, cvd = "deu")
+palette_dist(x, cvd = "pro", severity = 1)
+palette_dist(x, cvd = "pro", severity = 0.2)
 
 }
