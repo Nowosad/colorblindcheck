@@ -1,0 +1,301 @@
+---
+title: "Check rcartocolor"
+author: "Jakub Nowosad"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+      toc: true
+number_sections: true
+vignette: >
+  %\VignetteIndexEntry{check_rcartocolor}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 5
+)
+```
+
+```{r setup}
+library(colorblindcheck)
+library(rcartocolor)
+```
+
+# Quantitative
+
+## Colorblind friendly palettes
+
+```{r}
+display_carto_all(type = "quantitative")
+```
+
+### TealGrn
+
+```{r}
+TealGrn = carto_pal(7, "TealGrn")
+colorblindcheck::palette_check(TealGrn, plot = TRUE)
+```
+
+### Teal
+
+```{r}
+Teal = carto_pal(7, "Teal")
+colorblindcheck::palette_check(Teal, plot = TRUE)
+```
+
+### SunsetDark
+
+```{r}
+SunsetDark = carto_pal(7, "SunsetDark")
+colorblindcheck::palette_check(SunsetDark, plot = TRUE)
+```
+
+### Sunset
+
+```{r}
+Sunset = carto_pal(7, "Sunset")
+colorblindcheck::palette_check(Sunset, plot = TRUE)
+```
+
+### RedOr
+
+```{r}
+RedOr = carto_pal(7, "RedOr")
+colorblindcheck::palette_check(RedOr, plot = TRUE)
+```
+
+### PurpOr
+
+```{r}
+PurpOr = carto_pal(7, "PurpOr")
+colorblindcheck::palette_check(PurpOr, plot = TRUE)
+```
+
+### Purp
+
+```{r}
+Purp = carto_pal(7, "Purp")
+colorblindcheck::palette_check(Purp, plot = TRUE)
+```
+
+### PinkYl
+
+```{r}
+PinkYl = carto_pal(7, "PinkYl")
+colorblindcheck::palette_check(PinkYl, plot = TRUE)
+```
+
+### Peach
+
+```{r}
+Peach = carto_pal(7, "Peach")
+colorblindcheck::palette_check(Peach, plot = TRUE)
+```
+
+### OrYel
+
+```{r}
+OrYel = carto_pal(7, "OrYel")
+colorblindcheck::palette_check(OrYel, plot = TRUE)
+```
+
+### Mint
+
+```{r}
+Mint = carto_pal(7, "Mint")
+colorblindcheck::palette_check(Mint, plot = TRUE)
+```
+
+### Magenta
+
+```{r}
+Magenta = carto_pal(7, "Magenta")
+colorblindcheck::palette_check(Magenta, plot = TRUE)
+```
+
+### Emrld
+
+```{r}
+Emrld = carto_pal(7, "Emrld")
+colorblindcheck::palette_check(Emrld, plot = TRUE)
+```
+
+### DarkMint
+
+```{r}
+DarkMint = carto_pal(7, "DarkMint")
+colorblindcheck::palette_check(DarkMint, plot = TRUE)
+```
+
+### BurgYl
+
+```{r}
+BurgYl = carto_pal(7, "BurgYl")
+colorblindcheck::palette_check(BurgYl, plot = TRUE)
+```
+
+### Burg
+
+```{r}
+Burg = carto_pal(7, "Burg")
+colorblindcheck::palette_check(Burg, plot = TRUE)
+```
+
+### BrwnYl
+
+```{r}
+BrwnYl = carto_pal(7, "BrwnYl")
+colorblindcheck::palette_check(BrwnYl, plot = TRUE)
+```
+
+### BluYl
+
+```{r}
+BluYl = carto_pal(7, "BluYl")
+colorblindcheck::palette_check(BluYl, plot = TRUE)
+```
+
+### BluGrn
+
+```{r}
+BluGrn = carto_pal(7, "BluGrn")
+colorblindcheck::palette_check(BluGrn, plot = TRUE)
+```
+
+# Diverging
+
+```{r}
+display_carto_all(type = "diverging")
+```
+
+## Colorblind friendly palettes
+
+### Earth
+
+```{r}
+Tropic = carto_pal(7, "Earth")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+### ArmyRose
+
+```{r}
+Tropic = carto_pal(7, "ArmyRose")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+## Other
+
+### Tropic
+
+```{r}
+Tropic = carto_pal(7, "Tropic")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+### Temps
+
+```{r}
+Tropic = carto_pal(7, "Temps")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+### TealRose
+
+```{r}
+Tropic = carto_pal(7, "TealRose")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+### Geyser
+
+```{r}
+Tropic = carto_pal(7, "Geyser")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+### Fall
+
+```{r}
+Tropic = carto_pal(7, "Fall")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
+# Qualitative
+
+```{r}
+display_carto_all(type = "qualitative")
+```
+
+## Colorblind friendly palettes
+
+### Safe
+
+```{r}
+Safe = carto_pal(7, "Safe")
+colorblindcheck::palette_check(Safe, plot = TRUE)
+```
+
+## Other
+
+### Vivid
+
+```{r}
+Vivid = carto_pal(7, "Vivid")
+colorblindcheck::palette_check(Vivid, plot = TRUE)
+```
+
+### Prism
+
+```{r}
+Prism = carto_pal(7, "Prism")
+colorblindcheck::palette_check(Prism, plot = TRUE)
+```
+
+### Pastel
+
+```{r}
+Pastel = carto_pal(7, "Pastel")
+colorblindcheck::palette_check(Pastel, plot = TRUE)
+```
+
+### Bold
+
+```{r}
+Bold = carto_pal(7, "Bold")
+colorblindcheck::palette_check(Bold, plot = TRUE)
+```
+
+### Antique
+
+```{r}
+Antique = carto_pal(7, "Antique")
+colorblindcheck::palette_check(Antique, plot = TRUE)
+```
+
+# Aggregation
+
+```{r}
+display_carto_all(type = "aggregation")
+```
+
+## Colorblind friendly palettes
+
+### ag_Sunset
+
+```{r}
+ag_Sunset = carto_pal(7, "ag_Sunset")
+colorblindcheck::palette_check(ag_Sunset, plot = TRUE)
+```
+
+### ag_GrnYl
+
+```{r}
+ag_GrnYl = carto_pal(7, "ag_GrnYl")
+colorblindcheck::palette_check(ag_GrnYl, plot = TRUE)
+```
