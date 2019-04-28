@@ -18,10 +18,13 @@ Suggests:
     rcartocolor,
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    covr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
+URL: https://github.com/Nowosad/colorblindcheck
+BugReports: https://github.com/Nowosad/colorblindcheck/issues

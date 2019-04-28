@@ -3,7 +3,7 @@
 colorblindcheck
 ===============
 
-[![Travis build status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
+[![Travis build status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck) [![Codecov test coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/colorblindcheck?branch=master)
 
 Deciding if a color palette is a colorblind friendly is a hard task. This cannot be done in an entirely automatic fashion, as the decision needs to be confirmed by visual judgments. The goal of **colorblindcheck** is to provide tools to decide if the selected color palette is colorblind friendly, including:
 
