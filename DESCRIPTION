@@ -1,6 +1,6 @@
 Package: colorblindcheck
-Title: Check Color Palletes for Problems with Color Vision Deficiency
-Version: 0.0.1
+Title: Check Color Palettes for Problems with Color Vision Deficiency
+Version: 0.1.0
 Authors@R: c(
            person(given = "Jakub", 
            family = "Nowosad", 
@@ -8,11 +8,12 @@ Authors@R: c(
            email = "nowosad.jakub@gmail.com", 
            comment = c(ORCID = "0000-0002-1057-3721"))
            )
-Description: What the package does (one paragraph).
+Description: Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
+        It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies.
 Imports: 
-  colorspace,
-  methods,
-  spacesXYZ
+    colorspace,
+    methods,
+    spacesXYZ
 Suggests:
     rcartocolor,
     testthat,
@@ -22,4 +23,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
