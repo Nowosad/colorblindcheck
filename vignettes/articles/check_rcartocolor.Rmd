@@ -28,11 +28,11 @@ library(rcartocolor)
 
 # Quantitative
 
-## Colorblind friendly palettes
-
 ```{r}
 display_carto_all(type = "quantitative")
 ```
+
+## Colorblind friendly palettes
 
 ### TealGrn
 
