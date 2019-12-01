@@ -1,37 +1,63 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-colorblindcheck
-===============
 
-[![Travis build status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck) [![Codecov test coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/colorblindcheck?branch=master)
+# colorblindcheck
 
-Deciding if a color palette is a colorblind friendly is a hard task. This cannot be done in an entirely automatic fashion, as the decision needs to be confirmed by visual judgments. The goal of **colorblindcheck** is to provide tools to decide if the selected color palette is colorblind friendly, including:
+[![Travis build
+status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
+[![Codecov test
+coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/colorblindcheck?branch=master)
 
--   `palette_dist()` - Calculation of the distances between the colors in the input palette and between the colors in simulations of the color vision deficiencies - deuteranopia, protanopia, and tritanopia.
--   `palette_plot()` - Plotting of the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
--   `palette_check()` - Creating summary statistics comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
+Deciding if a color palette is a colorblind friendly is a hard task.
+This cannot be done in an entirely automatic fashion, as the decision
+needs to be confirmed by visual judgments. The goal of
+**colorblindcheck** is to provide tools to decide if the selected color
+palette is colorblind friendly, including:
 
-The work in this package was inspired by a blog post [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/) by [Gregor Aisch](https://twitter.com/driven_by_data).
+  - `palette_dist()` - Calculation of the distances between the colors
+    in the input palette and between the colors in simulations of the
+    color vision deficiencies - deuteranopia, protanopia, and
+    tritanopia.
+  - `palette_plot()` - Plotting of the original input palette and
+    simulations of color vision deficiencies - deuteranopia, protanopia,
+    and tritanopia.
+  - `palette_check()` - Creating summary statistics comparing the
+    original input palette and simulations of color vision deficiencies
+    - deuteranopia, protanopia, and tritanopia.
 
-Installation
-------------
+The work in this package was inspired by a blog post [I wrote some code
+that automatically checks visualizations for non-colorblind safe colors.
+Here’s how it
+works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
+by [Gregor
+Aisch](https://twitter.com/driven_by_data).
 
-You can install the released version of colorblindcheck from [CRAN](https://CRAN.R-project.org) with:
+## Installation
 
-``` r
-install.packages("colorblindcheck")
-```
+<!-- You can install the released version of colorblindcheck from [CRAN](https://CRAN.R-project.org) with: -->
 
-You can install the development version of **colorblindcheck** from [GitHub](https://github.com/Nowosad/colorblindcheck) with:
+<!-- ``` r -->
+
+<!-- install.packages("colorblindcheck") -->
+
+<!-- ``` -->
+
+You can install the development version of **colorblindcheck** from
+[GitHub](https://github.com/Nowosad/colorblindcheck) with:
 
 ``` r
 remotes::install_github("nowosad/colorblindcheck")
 ```
 
-Example
--------
+## Example
 
-The **colorblindcheck** accepts a vector of hexadecimal color descriptions as the input. It can be created using different existing R functions (e.g. `rainbow()`) or packages (e.g. [**colorspace**](https://cran.r-project.org/web/packages/colorspace/index.html), [**RColorBrewer**](https://cran.r-project.org/web/packages/RColorBrewer/index.html), [**rcartocolor**](https://cran.r-project.org/web/packages/rcartocolor/index.html), etc.).
+The **colorblindcheck** accepts a vector of hexadecimal color
+descriptions as the input. It can be created using different existing R
+functions (e.g. `rainbow()`) or packages (e.g.
+[**colorspace**](https://cran.r-project.org/web/packages/colorspace/index.html),
+[**RColorBrewer**](https://cran.r-project.org/web/packages/RColorBrewer/index.html),
+[**rcartocolor**](https://cran.r-project.org/web/packages/rcartocolor/index.html),
+etc.).
 
 ``` r
 library(colorblindcheck)
@@ -41,7 +67,9 @@ rainbow_pal
 #> [7] "#FF00DBFF"
 ```
 
-The primary function in this package is `palette_check()`, which creates a summary comparison between the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
+The primary function in this package is `palette_check()`, which creates
+a summary comparison between the original input palette and simulations
+of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 
 ``` r
 palette_check(rainbow_pal, plot = TRUE)
@@ -55,22 +83,40 @@ palette_check(rainbow_pal, plot = TRUE)
     #> 3   protanopia 7  12.13226  21   19  2.355309  55.41310  88.34820
     #> 4   tritanopia 7  12.13226  21   19  8.216194  51.53678  83.10000
 
-The `palette_check()` function returns a data.frame with 4 observations and 8 variables:
+The `palette_check()` function returns a data.frame with 4 observations
+and 8 variables:
 
--   `name`: original input color palette (normal), deuteranopia, protanopia, and tritanopia
--   `n`: number of colors
--   `tolerance`: minimal value of the acceptable difference between the colors to distinguish between them
--   `ncp`: number of color pairs
--   `ndcp`: number of differentiable color pairs (color pairs with distances above the tolerance value)
--   `min_dist`: minimal distance between colors
--   `mean_dist`: average distance between colors
--   `max_dist`: maximal distance between colors
+  - `name`: original input color palette (normal), deuteranopia,
+    protanopia, and tritanopia
+  - `n`: number of colors
+  - `tolerance`: minimal value of the acceptable difference between the
+    colors to distinguish between them
+  - `ncp`: number of color pairs
+  - `ndcp`: number of differentiable color pairs (color pairs with
+    distances above the tolerance value)
+  - `min_dist`: minimal distance between colors
+  - `mean_dist`: average distance between colors
+  - `max_dist`: maximal distance between colors
 
-Additionally, a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia can be shown. This help to decide if the selected color palette is colorblind friendly.
+Additionally, a plot comparing the original input palette and
+simulations of color vision deficiencies - deuteranopia, protanopia, and
+tritanopia can be shown. This help to decide if the selected color
+palette is colorblind friendly.
 
-For example, the above output shows that the minimal distance between colors in the input palette is about 12; however, the minimum distance between colors simulation of protanopia is only about 2. It can suggest that some colors in this palette would not be distinguishable by people with protanopia.
+For example, the above output shows that the minimal distance between
+colors in the input palette is about 12; however, the minimum distance
+between colors simulation of protanopia is only about 2. It can suggest
+that some colors in this palette would not be distinguishable by people
+with protanopia.
 
-The `palette_dist()` function calculates distances between the colors in the input palette, as well as in a simulation of the selected color vision deficiency - deuteranopia, protanopia, and tritanopia. It allows finding which colors are the most or the least similar and to compare the behavior of color palettes for different color vision deficiencies. In the original `rainbow_pal` object, the closest colors were the third and the fourth one (a distance of about 12); however, the deuteranopia version has a minimal distance of 2 between the second and third color.
+The `palette_dist()` function calculates distances between the colors in
+the input palette, as well as in a simulation of the selected color
+vision deficiency - deuteranopia, protanopia, and tritanopia. It allows
+finding which colors are the most or the least similar and to compare
+the behavior of color palettes for different color vision deficiencies.
+In the original `rainbow_pal` object, the closest colors were the third
+and the fourth one (a distance of about 12); however, the deuteranopia
+version has a minimal distance of 2 between the second and third color.
 
 ``` r
 # normal
@@ -95,10 +141,14 @@ palette_dist(rainbow_pal, cvd = "pro")
 #> [7,]   NA       NA        NA       NA       NA       NA        NA
 ```
 
-References
-----------
+## References
 
--   [Datawrapper now checks your colors, so you don’t have to](https://blog.datawrapper.de/colorblind-check/)
--   [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
--   [Color Vision Deficiency Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
--   [Delta E: The Color Difference](http://www.colorwiki.com/wiki/Delta_E:_The_Color_Difference)
+  - [Datawrapper now checks your colors, so you don’t have
+    to](https://blog.datawrapper.de/colorblind-check/)
+  - [I wrote some code that automatically checks visualizations for
+    non-colorblind safe colors. Here’s how it
+    works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
+  - [Color Vision Deficiency
+    Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
+  - [Delta E: The Color
+    Difference](http://www.colorwiki.com/wiki/Delta_E:_The_Color_Difference)
