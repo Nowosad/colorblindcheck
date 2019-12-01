@@ -76,12 +76,12 @@ It can suggest that some colors in this palette would not be distinguishable by 
 
 The `palette_dist()` function calculates distances between the colors in the input palette, as well as in a simulation of the selected color vision deficiency - deuteranopia, protanopia, and tritanopia.
 It allows finding which colors are the most or the least similar and to compare the behavior of color palettes for different color vision deficiencies.
-In the original `rainbow_pal` object, the closest colors were the third and the fourth one (a distance of about 12); however, the deuteranopia version has a minimal distance of 2 between the second and third color.
+In the original `rainbow_pal` object, the closest colors were the third and the fourth one (a distance of about 12); however, the protanopia version has a minimal distance of 2 between the second and third color.
 
 ```{r}
 # normal
 palette_dist(rainbow_pal)
-# deuteranopia
+# protanopia
 palette_dist(rainbow_pal, cvd = "pro")
 ```
 

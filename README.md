@@ -115,7 +115,7 @@ vision deficiency - deuteranopia, protanopia, and tritanopia. It allows
 finding which colors are the most or the least similar and to compare
 the behavior of color palettes for different color vision deficiencies.
 In the original `rainbow_pal` object, the closest colors were the third
-and the fourth one (a distance of about 12); however, the deuteranopia
+and the fourth one (a distance of about 12); however, the protanopia
 version has a minimal distance of 2 between the second and third color.
 
 ``` r
@@ -129,7 +129,7 @@ palette_dist(rainbow_pal)
 #> [5,]   NA       NA       NA       NA       NA 35.47760  44.20031
 #> [6,]   NA       NA       NA       NA       NA       NA  29.94683
 #> [7,]   NA       NA       NA       NA       NA       NA        NA
-# deuteranopia
+# protanopia
 palette_dist(rainbow_pal, cvd = "pro")
 #>      [,1]     [,2]      [,3]     [,4]     [,5]     [,6]      [,7]
 #> [1,]   NA 73.78789 76.166629 75.13412 58.36222 52.03797 50.317457
