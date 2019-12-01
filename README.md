@@ -16,14 +16,13 @@ palette is colorblind friendly, including:
 
   - `palette_dist()` - Calculation of the distances between the colors
     in the input palette and between the colors in simulations of the
-    color vision deficiencies - deuteranopia, protanopia, and
-    tritanopia.
+    color vision deficiencies: deuteranopia, protanopia, and tritanopia.
   - `palette_plot()` - Plotting of the original input palette and
-    simulations of color vision deficiencies - deuteranopia, protanopia,
+    simulations of color vision deficiencies: deuteranopia, protanopia,
     and tritanopia.
   - `palette_check()` - Creating summary statistics comparing the
-    original input palette and simulations of color vision deficiencies
-    - deuteranopia, protanopia, and tritanopia.
+    original input palette and simulations of color vision deficiencies:
+    deuteranopia, protanopia, and tritanopia.
 
 The work in this package was inspired by a blog post [I wrote some code
 that automatically checks visualizations for non-colorblind safe colors.
