@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checking rcartocolor for colorblind friendly palettes • colorblindcheck</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
 <script src="../../pkgdown.js"></script><meta property="og:title" content="Checking rcartocolor for colorblind friendly palettes">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -38,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -64,7 +65,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/Nowosad/colorblindcheck">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -77,13 +78,14 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Checking rcartocolor for colorblind friendly palettes</h1>
                         <h4 class="author">Jakub Nowosad</h4>
             
-            <h4 class="date">2019-05-05</h4>
+            <h4 class="date">2019-12-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/Nowosad/colorblindcheck/blob/master/vignettes/articles/check_rcartocolor.Rmd"><code>vignettes/articles/check_rcartocolor.Rmd</code></a></small>
       <div class="hidden name"><code>check_rcartocolor.Rmd</code></div>
@@ -92,12 +94,12 @@
 
     
     
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(colorblindcheck)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rcartocolor)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(colorblindcheck)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rcartocolor)</a></code></pre></div>
 <div id="quantitative" class="section level1">
 <h1 class="hasAnchor">
 <a href="#quantitative" class="anchor"></a>Quantitative</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/display_carto_all">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"quantitative"</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/display_carto_all.html">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"quantitative"</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-2-1.png" width="576"></p>
 <div id="colorblind-friendly-palettes" class="section level2">
 <h2 class="hasAnchor">
@@ -105,8 +107,8 @@
 <div id="tealgrn" class="section level3">
 <h3 class="hasAnchor">
 <a href="#tealgrn" class="anchor"></a>TealGrn</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">TealGrn =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"TealGrn"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(TealGrn, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">TealGrn =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"TealGrn"</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(TealGrn, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-3-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  4.525989  21   21 4.525989  20.41736 43.86276
@@ -117,8 +119,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="teal" class="section level3">
 <h3 class="hasAnchor">
 <a href="#teal" class="anchor"></a>Teal</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Teal =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Teal"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Teal, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">Teal =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Teal"</span>)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Teal, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-4-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  6.862176  21   21 6.862176  23.00297 50.28819
@@ -129,8 +131,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="sunsetdark" class="section level3">
 <h3 class="hasAnchor">
 <a href="#sunsetdark" class="anchor"></a>SunsetDark</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">SunsetDark =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"SunsetDark"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(SunsetDark, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">SunsetDark =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"SunsetDark"</span>)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(SunsetDark, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-5-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  6.671338  21   21 6.671338  31.85827 71.68336
@@ -141,8 +143,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="sunset" class="section level3">
 <h3 class="hasAnchor">
 <a href="#sunset" class="anchor"></a>Sunset</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Sunset =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Sunset"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Sunset, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">Sunset =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Sunset"</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Sunset, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-6-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  13.55652  21   21 13.556520  35.18554 67.75598
@@ -153,8 +155,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="redor" class="section level3">
 <h3 class="hasAnchor">
 <a href="#redor" class="anchor"></a>RedOr</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">RedOr =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"RedOr"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(RedOr, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">RedOr =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"RedOr"</span>)</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(RedOr, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-7-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.223173  21   21 8.223173  21.81904 46.51079
@@ -165,8 +167,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="purpor" class="section level3">
 <h3 class="hasAnchor">
 <a href="#purpor" class="anchor"></a>PurpOr</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PurpOr =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"PurpOr"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(PurpOr, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">PurpOr =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"PurpOr"</span>)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(PurpOr, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-8-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7   9.80217  21   21 9.802170  26.51601 56.36869
@@ -177,8 +179,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="purp" class="section level3">
 <h3 class="hasAnchor">
 <a href="#purp" class="anchor"></a>Purp</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Purp =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Purp"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Purp, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">Purp =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Purp"</span>)</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Purp, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-9-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  6.622445  21   21 6.622445  19.66350 42.97008
@@ -189,8 +191,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="pinkyl" class="section level3">
 <h3 class="hasAnchor">
 <a href="#pinkyl" class="anchor"></a>PinkYl</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PinkYl =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"PinkYl"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(PinkYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">PinkYl =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"PinkYl"</span>)</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(PinkYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-10-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.848948  21   21 8.848948  26.35793 55.69140
@@ -201,8 +203,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="peach" class="section level3">
 <h3 class="hasAnchor">
 <a href="#peach" class="anchor"></a>Peach</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Peach =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Peach"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Peach, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">Peach =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Peach"</span>)</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Peach, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-11-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7   6.16765  21   21 6.167650  16.86487 36.14542
@@ -213,8 +215,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="oryel" class="section level3">
 <h3 class="hasAnchor">
 <a href="#oryel" class="anchor"></a>OrYel</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OrYel =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"OrYel"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(OrYel, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">OrYel =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"OrYel"</span>)</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(OrYel, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-12-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  7.124452  21   21 7.124452  21.63788 45.72253
@@ -225,8 +227,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="mint" class="section level3">
 <h3 class="hasAnchor">
 <a href="#mint" class="anchor"></a>Mint</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Mint =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Mint"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Mint, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">Mint =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Mint"</span>)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Mint, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-13-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.183972  21   21 8.183972  23.74098 52.40978
@@ -237,8 +239,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="magenta" class="section level3">
 <h3 class="hasAnchor">
 <a href="#magenta" class="anchor"></a>Magenta</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Magenta =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Magenta"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Magenta, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">Magenta =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Magenta"</span>)</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Magenta, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-14-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.634503  21   21 8.634503  24.48868 56.17640
@@ -249,8 +251,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="emrld" class="section level3">
 <h3 class="hasAnchor">
 <a href="#emrld" class="anchor"></a>Emrld</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Emrld =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Emrld"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Emrld, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">Emrld =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Emrld"</span>)</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Emrld, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-15-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.861165  21   21 8.861165  31.95098 68.80566
@@ -261,8 +263,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="darkmint" class="section level3">
 <h3 class="hasAnchor">
 <a href="#darkmint" class="anchor"></a>DarkMint</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">DarkMint =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"DarkMint"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(DarkMint, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">DarkMint =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"DarkMint"</span>)</a>
+<a class="sourceLine" id="cb29-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(DarkMint, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-16-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  9.080145  21   21 9.080145  29.83704 67.63179
@@ -273,8 +275,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="burgyl" class="section level3">
 <h3 class="hasAnchor">
 <a href="#burgyl" class="anchor"></a>BurgYl</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">BurgYl =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BurgYl"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(BurgYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">BurgYl =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BurgYl"</span>)</a>
+<a class="sourceLine" id="cb31-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(BurgYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-17-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  7.593621  21   21 7.593621  28.83648 64.07379
@@ -285,8 +287,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="burg" class="section level3">
 <h3 class="hasAnchor">
 <a href="#burg" class="anchor"></a>Burg</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Burg =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Burg"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Burg, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">Burg =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Burg"</span>)</a>
+<a class="sourceLine" id="cb33-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Burg, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-18-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7   8.15224  21   21 8.152240  25.13510 58.32481
@@ -297,8 +299,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="brwnyl" class="section level3">
 <h3 class="hasAnchor">
 <a href="#brwnyl" class="anchor"></a>BrwnYl</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">BrwnYl =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BrwnYl"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(BrwnYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1">BrwnYl =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BrwnYl"</span>)</a>
+<a class="sourceLine" id="cb35-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(BrwnYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-19-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  11.09279  21   21 11.092795  32.40575 71.82486
@@ -309,8 +311,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="bluyl" class="section level3">
 <h3 class="hasAnchor">
 <a href="#bluyl" class="anchor"></a>BluYl</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">BluYl =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BluYl"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(BluYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">BluYl =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BluYl"</span>)</a>
+<a class="sourceLine" id="cb37-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(BluYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-20-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  11.39398  21   21 11.393982  31.96155 68.18041
@@ -321,8 +323,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="blugrn" class="section level3">
 <h3 class="hasAnchor">
 <a href="#blugrn" class="anchor"></a>BluGrn</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">BluGrn =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BluGrn"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(BluGrn, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">BluGrn =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"BluGrn"</span>)</a>
+<a class="sourceLine" id="cb39-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(BluGrn, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-21-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  7.171832  21   21 7.171832  25.39330 55.01384
@@ -335,7 +337,7 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="diverging" class="section level1">
 <h1 class="hasAnchor">
 <a href="#diverging" class="anchor"></a>Diverging</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/display_carto_all">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"diverging"</span>)</code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/display_carto_all.html">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"diverging"</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-22-1.png" width="576"></p>
 <div id="colorblind-friendly-palettes-1" class="section level2">
 <h2 class="hasAnchor">
@@ -343,8 +345,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="earth" class="section level3">
 <h3 class="hasAnchor">
 <a href="#earth" class="anchor"></a>Earth</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Earth"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Earth"</span>)</a>
+<a class="sourceLine" id="cb42-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-23-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7   12.5245  21   21 12.524500  27.12465 42.52298
@@ -355,8 +357,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="armyrose" class="section level3">
 <h3 class="hasAnchor">
 <a href="#armyrose" class="anchor"></a>ArmyRose</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ArmyRose"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ArmyRose"</span>)</a>
+<a class="sourceLine" id="cb44-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-24-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  10.75289  21   21 10.752894  31.11200 49.52187
@@ -371,8 +373,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="tropic" class="section level3">
 <h3 class="hasAnchor">
 <a href="#tropic" class="anchor"></a>Tropic</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Tropic"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Tropic"</span>)</a>
+<a class="sourceLine" id="cb46-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-25-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp min_dist mean_dist max_dist
 #&gt; 1       normal 7  8.818466  21   21 8.818466  30.64224 48.18967
@@ -383,8 +385,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="temps" class="section level3">
 <h3 class="hasAnchor">
 <a href="#temps" class="anchor"></a>Temps</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Temps"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Temps"</span>)</a>
+<a class="sourceLine" id="cb48-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-26-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  15.00693  21   21 15.006928  37.11484 67.19813
@@ -395,8 +397,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="tealrose" class="section level3">
 <h3 class="hasAnchor">
 <a href="#tealrose" class="anchor"></a>TealRose</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"TealRose"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"TealRose"</span>)</a>
+<a class="sourceLine" id="cb50-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-27-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  11.77803  21   21 11.778027  32.65683 58.37099
@@ -407,8 +409,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="geyser" class="section level3">
 <h3 class="hasAnchor">
 <a href="#geyser" class="anchor"></a>Geyser</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Geyser"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Geyser"</span>)</a>
+<a class="sourceLine" id="cb52-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-28-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  13.88224  21   21 13.882238  30.98809 48.71079
@@ -419,8 +421,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="fall" class="section level3">
 <h3 class="hasAnchor">
 <a href="#fall" class="anchor"></a>Fall</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Tropic =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Fall"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1">Tropic =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Fall"</span>)</a>
+<a class="sourceLine" id="cb54-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Tropic, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-29-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  13.76708  21   21 13.767081  30.25280 50.40550
@@ -433,7 +435,7 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="qualitative" class="section level1">
 <h1 class="hasAnchor">
 <a href="#qualitative" class="anchor"></a>Qualitative</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/display_carto_all">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"qualitative"</span>)</code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/display_carto_all.html">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"qualitative"</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-30-1.png" width="576"></p>
 <div id="colorblind-friendly-palettes-2" class="section level2">
 <h2 class="hasAnchor">
@@ -441,8 +443,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="safe" class="section level3">
 <h3 class="hasAnchor">
 <a href="#safe" class="anchor"></a>Safe</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Safe =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Safe"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Safe, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">Safe =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Safe"</span>)</a>
+<a class="sourceLine" id="cb57-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Safe, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-31-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  19.81317  21   21 19.813167  44.29825 83.53756
@@ -457,8 +459,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="vivid" class="section level3">
 <h3 class="hasAnchor">
 <a href="#vivid" class="anchor"></a>Vivid</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Vivid =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Vivid"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Vivid, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" data-line-number="1">Vivid =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Vivid"</span>)</a>
+<a class="sourceLine" id="cb59-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Vivid, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-32-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  19.09441  21   21 19.094412  38.74835 75.06609
@@ -469,8 +471,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="prism" class="section level3">
 <h3 class="hasAnchor">
 <a href="#prism" class="anchor"></a>Prism</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Prism =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Prism"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Prism, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" data-line-number="1">Prism =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Prism"</span>)</a>
+<a class="sourceLine" id="cb61-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Prism, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-33-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  18.70177  21   21 18.701769  36.68691 67.26953
@@ -481,8 +483,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="pastel" class="section level3">
 <h3 class="hasAnchor">
 <a href="#pastel" class="anchor"></a>Pastel</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Pastel =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Pastel"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Pastel, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1">Pastel =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Pastel"</span>)</a>
+<a class="sourceLine" id="cb63-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Pastel, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-34-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp   min_dist mean_dist max_dist
 #&gt; 1       normal 7  18.11564  21   21 18.1156424  33.19801 63.55396
@@ -493,8 +495,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="bold" class="section level3">
 <h3 class="hasAnchor">
 <a href="#bold" class="anchor"></a>Bold</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Bold =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Bold"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Bold, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1">Bold =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Bold"</span>)</a>
+<a class="sourceLine" id="cb65-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Bold, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-35-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  16.72723  21   21 16.727231  44.47418 76.61599
@@ -505,8 +507,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="antique" class="section level3">
 <h3 class="hasAnchor">
 <a href="#antique" class="anchor"></a>Antique</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Antique =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Antique"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(Antique, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" data-line-number="1">Antique =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Antique"</span>)</a>
+<a class="sourceLine" id="cb67-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(Antique, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-36-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  10.70734  21   21 10.707344  27.24781 50.59054
@@ -519,7 +521,7 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="aggregation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#aggregation" class="anchor"></a>Aggregation</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/display_carto_all">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"aggregation"</span>)</code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/display_carto_all.html">display_carto_all</a></span>(<span class="dt">type =</span> <span class="st">"aggregation"</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-37-1.png" width="576"></p>
 <div id="colorblind-friendly-palettes-3" class="section level2">
 <h2 class="hasAnchor">
@@ -527,8 +529,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="ag_sunset" class="section level3">
 <h3 class="hasAnchor">
 <a href="#ag_sunset" class="anchor"></a>ag_Sunset</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ag_Sunset =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ag_Sunset"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(ag_Sunset, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1">ag_Sunset =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ag_Sunset"</span>)</a>
+<a class="sourceLine" id="cb70-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(ag_Sunset, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-38-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  11.29042  21   21 11.290421  37.45088 75.02318
@@ -539,8 +541,8 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 <div id="ag_grnyl" class="section level3">
 <h3 class="hasAnchor">
 <a href="#ag_grnyl" class="anchor"></a>ag_GrnYl</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ag_GrnYl =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/rcartocolor/topics/carto_pal">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ag_GrnYl"</span>)
-colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorblindcheck/topics/palette_check">palette_check</a></span>(ag_GrnYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1">ag_GrnYl =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"ag_GrnYl"</span>)</a>
+<a class="sourceLine" id="cb72-2" data-line-number="2">colorblindcheck<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/colorblindcheck/man/palette_check.html">palette_check</a></span>(ag_GrnYl, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-39-1.png" width="576"></p>
 <pre><code>#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist
 #&gt; 1       normal 7  11.29211  21   21 11.292112  31.02678 64.17769
@@ -553,6 +555,7 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -586,17 +589,20 @@ colorblindcheck<span class="op">::</span><span class="kw"><a href="https://www.r
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Jakub Nowosad.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>
