@@ -1,0 +1,127 @@
+---
+title: "Checking bivariate palettes for colorblind friendliness"
+author: "Jakub Nowosad"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+      toc: true
+number_sections: true
+vignette: >
+  %\VignetteIndexEntry{check_bivariate}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 5
+)
+```
+
+```{r setup}
+library(colorblindcheck)
+library(pals)
+bivcol = function(pal, nx = 3, ny = 3){
+  tit = substitute(pal)
+  if (is.function(pal))
+    pal = pal()
+  ncol = length(pal)
+  if (missing(nx))
+    nx = sqrt(ncol)
+  if (missing(ny))
+    ny = nx
+  image(matrix(1:ncol, nrow = ny), axes = FALSE, col = pal, asp = 1)
+  mtext(tit)
+}
+```
+
+```{r}
+par(mfrow = c(3, 4), mar = c(1, 1, 2, 1))
+bivcol(arc.bluepink)
+bivcol(brewer.divdiv)
+bivcol(brewer.divseq)
+bivcol(brewer.qualseq)
+bivcol(brewer.seqseq1)
+bivcol(brewer.seqseq2)
+bivcol(census.blueyellow)
+bivcol(stevens.bluered)
+bivcol(stevens.greenblue)
+bivcol(stevens.pinkblue)
+bivcol(stevens.pinkgreen)
+bivcol(stevens.purplegold)
+```
+
+# arc.bluepink
+
+```{r}
+colorblindcheck::palette_check(arc.bluepink(), plot = TRUE, bivariate = TRUE)
+```
+
+# brewer.divdiv
+
+```{r}
+colorblindcheck::palette_check(brewer.divdiv(), plot = TRUE, bivariate = TRUE)
+```
+
+# brewer.divseq
+
+```{r}
+colorblindcheck::palette_check(brewer.divseq(), plot = TRUE, bivariate = TRUE)
+```
+
+# brewer.qualseq
+
+```{r}
+colorblindcheck::palette_check(brewer.qualseq(), plot = TRUE, bivariate = TRUE)
+```
+
+# brewer.seqseq1
+
+```{r}
+colorblindcheck::palette_check(brewer.seqseq1(), plot = TRUE, bivariate = TRUE)
+```
+
+# brewer.seqseq2
+
+```{r}
+colorblindcheck::palette_check(brewer.seqseq2(), plot = TRUE, bivariate = TRUE)
+```
+
+# census.blueyellow
+
+```{r}
+colorblindcheck::palette_check(census.blueyellow(), plot = TRUE, bivariate = TRUE)
+```
+
+# stevens.bluered
+
+```{r}
+colorblindcheck::palette_check(stevens.bluered(), plot = TRUE, bivariate = TRUE)
+```
+
+# stevens.greenblue
+
+```{r}
+colorblindcheck::palette_check(stevens.greenblue(), plot = TRUE, bivariate = TRUE)
+```
+
+# stevens.pinkblue
+
+```{r}
+colorblindcheck::palette_check(stevens.pinkblue(), plot = TRUE, bivariate = TRUE)
+```
+
+# stevens.pinkgreen
+
+```{r}
+colorblindcheck::palette_check(stevens.pinkgreen(), plot = TRUE, bivariate = TRUE)
+```
+
+# stevens.purplegold
+
+```{r}
+colorblindcheck::palette_check(stevens.purplegold(), plot = TRUE, bivariate = TRUE)
+```
