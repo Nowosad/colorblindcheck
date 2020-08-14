@@ -4,7 +4,14 @@
 \alias{palette_check}
 \title{Compare Palette with Color Vision Deficiencies}
 \usage{
-palette_check(x, tolerance = NULL, plot = FALSE, severity = 1, ...)
+palette_check(
+  x,
+  tolerance = NULL,
+  plot = FALSE,
+  bivariate = FALSE,
+  severity = 1,
+  ...
+)
 }
 \arguments{
 \item{x}{A vector of hexadecimal color descriptions}
@@ -12,6 +19,8 @@ palette_check(x, tolerance = NULL, plot = FALSE, severity = 1, ...)
 \item{tolerance}{The minimal value of acceptable difference between the colors to distinguish between them. As the default, minimal distance between colors in the original input palette is given.}
 
 \item{plot}{If TRUE, display a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia}
+
+\item{bivariate}{If TRUE (and plot = TRUE), display a bivariate plot (plot where colors are located in columns and rows) comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia}
 
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
 
@@ -46,4 +55,7 @@ palette_check(x, plot = TRUE)
 palette_check(x, tolerance = 1)
 palette_check(x, tolerance = 10, metric = 1976)
 palette_check(x, plot = TRUE, severity = 0.5)
+
+y = rcartocolor::carto_pal(4, "Sunset")
+palette_check(y, plot = TRUE, bivariate = TRUE, severity = 0.5)
 }

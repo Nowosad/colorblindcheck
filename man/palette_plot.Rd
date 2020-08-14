@@ -24,3 +24,6 @@ palette_plot(x = rcartocolor::carto_pal(11, "Safe"))
 palette_plot(x = rcartocolor::carto_pal(7, "Earth"))
 palette_plot(x = rcartocolor::carto_pal(11, "Vivid"))
 }
+\seealso{
+palette_bivariate_plot
+}

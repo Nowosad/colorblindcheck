@@ -1,6 +1,6 @@
 Package: colorblindcheck
 Title: Check Color Palettes for Problems with Color Vision Deficiency
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
            person(given = "Jakub", 
            family = "Nowosad", 
@@ -24,7 +24,7 @@ Suggests:
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 URL: https://github.com/Nowosad/colorblindcheck
