@@ -5,6 +5,7 @@
 #' @param x A vector of hexadecimal color descriptions
 #' @param tolerance The minimal value of acceptable difference between the colors to distinguish between them. As the default, minimal distance between colors in the original input palette is given.
 #' @param plot If TRUE, display a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
+#' @param bivariate If TRUE (and plot = TRUE), display a bivariate plot (plot where colors are located in columns and rows) comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
 #' @param severity Severity of the color vision defect, a number between 0 and 1
 #' @param ... Other arguments passed on to [palette_dist()] to control the color metric
 #'
@@ -32,7 +33,10 @@
 #' palette_check(x, tolerance = 1)
 #' palette_check(x, tolerance = 10, metric = 1976)
 #' palette_check(x, plot = TRUE, severity = 0.5)
-palette_check = function(x, tolerance = NULL, plot = FALSE, severity = 1, ...){
+#' 
+#' y = rcartocolor::carto_pal(4, "Sunset")
+#' palette_check(y, plot = TRUE, bivariate = TRUE, severity = 0.5)
+palette_check = function(x, tolerance = NULL, plot = FALSE, bivariate = FALSE, severity = 1, ...){
 
   x_dist = palette_dist(x)
   deu_dist = palette_dist(x, cvd = "deu", severity = severity, ...)
@@ -63,8 +67,9 @@ palette_check = function(x, tolerance = NULL, plot = FALSE, severity = 1, ...){
   #   spark_hist(pro_dist),
   #   spark_hist(tri_dist)
   # )
-  
-  if (plot){
+  if (plot && bivariate){
+    palette_bivariate_plot(x, severity = severity)
+  } else if (plot){
     palette_plot(x, severity = severity)
   }
   
