@@ -29,7 +29,7 @@ The work in this package was inspired by a blog post [I wrote some code that aut
 ## Example
 
 The **colorblindcheck** accepts a vector of hexadecimal color descriptions as the input. 
-It can be created using different existing R functions (e.g. `rainbow()`) or packages (e.g. [**colorspace**](https://cran.r-project.org/web/packages/colorspace/index.html), [**RColorBrewer**](https://cran.r-project.org/web/packages/RColorBrewer/index.html), [**rcartocolor**](https://cran.r-project.org/web/packages/rcartocolor/index.html), etc.).
+It can be created using different existing R functions (e.g. `rainbow()`) or packages (e.g. [**colorspace**](https://cran.r-project.org/package=colorspace), [**RColorBrewer**](https://cran.r-project.org/package=RColorBrewer), [**rcartocolor**](https://cran.r-project.org/package=rcartocolor), etc.).
 
 ```{r}
 library(colorblindcheck)

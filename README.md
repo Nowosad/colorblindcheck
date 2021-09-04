@@ -28,8 +28,7 @@ The work in this package was inspired by a blog post [I wrote some code
 that automatically checks visualizations for non-colorblind safe colors.
 Here’s how it
 works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
-by [Gregor
-Aisch](https://twitter.com/driven_by_data).
+by [Gregor Aisch](https://twitter.com/driven_by_data).
 
 ## Installation
 
@@ -52,18 +51,17 @@ remotes::install_github("nowosad/colorblindcheck")
 
 The **colorblindcheck** accepts a vector of hexadecimal color
 descriptions as the input. It can be created using different existing R
-functions (e.g. `rainbow()`) or packages (e.g.
-[**colorspace**](https://cran.r-project.org/web/packages/colorspace/index.html),
-[**RColorBrewer**](https://cran.r-project.org/web/packages/RColorBrewer/index.html),
-[**rcartocolor**](https://cran.r-project.org/web/packages/rcartocolor/index.html),
+functions (e.g. `rainbow()`) or packages
+(e.g. [**colorspace**](https://cran.r-project.org/package=colorspace),
+[**RColorBrewer**](https://cran.r-project.org/package=RColorBrewer),
+[**rcartocolor**](https://cran.r-project.org/package=rcartocolor),
 etc.).
 
 ``` r
 library(colorblindcheck)
 rainbow_pal = rainbow(n = 7)
 rainbow_pal
-#> [1] "#FF0000FF" "#FFDB00FF" "#49FF00FF" "#00FF92FF" "#0092FFFF" "#4900FFFF"
-#> [7] "#FF00DBFF"
+#> [1] "#FF0000" "#FFDB00" "#49FF00" "#00FF92" "#0092FF" "#4900FF" "#FF00DB"
 ```
 
 The primary function in this package is `palette_check()`, which creates
