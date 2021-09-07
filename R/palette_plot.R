@@ -9,6 +9,7 @@
 #' 
 #' @seealso palette_bivariate_plot
 #'
+#' @return A plot with the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
 #' @export
 #'
 #' @examples
@@ -74,6 +75,8 @@ palette_plot = function(x, severity = 1){
 #' 
 #' @seealso palette_plot
 #'
+#' @return A plot with the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
+#' 
 #' @export
 #'
 #' @examples

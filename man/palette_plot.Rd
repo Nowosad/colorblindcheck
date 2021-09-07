@@ -11,6 +11,9 @@ palette_plot(x, severity = 1)
 
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
 }
+\value{
+A plot with the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
+}
 \description{
 Plot of the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia.
 }
