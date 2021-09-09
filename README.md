@@ -3,10 +3,15 @@
 
 # colorblindcheck
 
+<!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/colorblindcheck)](https://CRAN.R-project.org/package=colorblindcheck)
 [![Travis build
 status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
 [![Codecov test
 coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/colorblindcheck?branch=master)
+<!-- badges: end -->
 
 Deciding if a color palette is a colorblind friendly is a hard task.
 This cannot be done in an entirely automatic fashion, as the decision
