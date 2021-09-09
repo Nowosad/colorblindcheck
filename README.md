@@ -37,13 +37,12 @@ by [Gregor Aisch](https://twitter.com/driven_by_data).
 
 ## Installation
 
-<!-- You can install the released version of colorblindcheck from [CRAN](https://CRAN.R-project.org) with: -->
+You can install the released version of **colorblindcheck** from
+[CRAN](https://CRAN.R-project.org) with:
 
-<!-- ``` r -->
-
-<!-- install.packages("colorblindcheck") -->
-
-<!-- ``` -->
+``` r
+install.packages("colorblindcheck")
+```
 
 You can install the development version of **colorblindcheck** from
 [GitHub](https://github.com/Nowosad/colorblindcheck) with:
