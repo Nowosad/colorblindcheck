@@ -11,6 +11,8 @@ status](https://www.r-pkg.org/badges/version/colorblindcheck)](https://CRAN.R-pr
 status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
 [![Codecov test
 coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/colorblindcheck?branch=master)
+[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
 <!-- badges: end -->
 
 Deciding if a color palette is a colorblind friendly is a hard task.
@@ -19,13 +21,13 @@ needs to be confirmed by visual judgments. The goal of
 **colorblindcheck** is to provide tools to decide if the selected color
 palette is colorblind friendly, including:
 
-  - `palette_dist()` - Calculation of the distances between the colors
+-   `palette_dist()` - Calculation of the distances between the colors
     in the input palette and between the colors in simulations of the
     color vision deficiencies: deuteranopia, protanopia, and tritanopia.
-  - `palette_plot()` - Plotting of the original input palette and
+-   `palette_plot()` - Plotting of the original input palette and
     simulations of color vision deficiencies: deuteranopia, protanopia,
     and tritanopia.
-  - `palette_check()` - Creating summary statistics comparing the
+-   `palette_check()` - Creating summary statistics comparing the
     original input palette and simulations of color vision deficiencies:
     deuteranopia, protanopia, and tritanopia.
 
@@ -87,17 +89,17 @@ palette_check(rainbow_pal, plot = TRUE)
 The `palette_check()` function returns a data.frame with 4 observations
 and 8 variables:
 
-  - `name`: original input color palette (normal), deuteranopia,
+-   `name`: original input color palette (normal), deuteranopia,
     protanopia, and tritanopia
-  - `n`: number of colors
-  - `tolerance`: minimal value of the acceptable difference between the
+-   `n`: number of colors
+-   `tolerance`: minimal value of the acceptable difference between the
     colors to distinguish between them
-  - `ncp`: number of color pairs
-  - `ndcp`: number of differentiable color pairs (color pairs with
+-   `ncp`: number of color pairs
+-   `ndcp`: number of differentiable color pairs (color pairs with
     distances above the tolerance value)
-  - `min_dist`: minimal distance between colors
-  - `mean_dist`: average distance between colors
-  - `max_dist`: maximal distance between colors
+-   `min_dist`: minimal distance between colors
+-   `mean_dist`: average distance between colors
+-   `max_dist`: maximal distance between colors
 
 Additionally, a plot comparing the original input palette and
 simulations of color vision deficiencies - deuteranopia, protanopia, and
@@ -144,12 +146,12 @@ palette_dist(rainbow_pal, cvd = "pro")
 
 ## References
 
-  - [Datawrapper now checks your colors, so you don’t have
+-   [Datawrapper now checks your colors, so you don’t have
     to](https://blog.datawrapper.de/colorblind-check/)
-  - [I wrote some code that automatically checks visualizations for
+-   [I wrote some code that automatically checks visualizations for
     non-colorblind safe colors. Here’s how it
     works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
-  - [Color Vision Deficiency
+-   [Color Vision Deficiency
     Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
-  - [Delta E: The Color
+-   [Delta E: The Color
     Difference](http://www.colorwiki.com/wiki/Delta_E:_The_Color_Difference)
