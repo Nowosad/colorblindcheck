@@ -6,7 +6,7 @@
 \alias{colorblindcheck-package}
 \title{colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency}
 \description{
-Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia. It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies. This work was inspired by the blog post at <http://www.vis4.net/blog/2018/02/automate-colorblind-checking/>.
+Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia. It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies. This work was inspired by the blog post at \url{http://www.vis4.net/blog/2018/02/automate-colorblind-checking/}.
 }
 \seealso{
 Useful links:

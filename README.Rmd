@@ -76,12 +76,12 @@ The `palette_check()` function returns a data.frame with 4 observations and 8 va
 Additionally, a plot comparing the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia can be shown.
 This help to decide if the selected color palette is colorblind friendly.
 
-For example, the above output shows that the minimal distance between colors in the input palette is about 12; however, the minimum distance between colors simulation of protanopia is only about 2.
-It can suggest that some colors in this palette would not be distinguishable by people with protanopia.
+For example, the above output shows that the minimal distance between colors in the input palette is about 12; however, the minimum distance between colors simulation of tritanopia is only about 2.
+It can suggest that some colors in this palette would not be distinguishable by people with color vision deficiencies.
 
 The `palette_dist()` function calculates distances between the colors in the input palette, as well as in a simulation of the selected color vision deficiency - deuteranopia, protanopia, and tritanopia.
 It allows finding which colors are the most or the least similar and to compare the behavior of color palettes for different color vision deficiencies.
-In the original `rainbow_pal` object, the closest colors were the third and the fourth one (a distance of about 12); however, the protanopia version has a minimal distance of 2 between the second and third color.
+In the original `rainbow_pal` object, the closest colors were the third and the fourth one (a distance of about 12); however, the protanopia version has a minimal distance of 3 between the second and third color.
 
 ```{r}
 # normal

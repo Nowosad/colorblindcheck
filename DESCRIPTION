@@ -25,7 +25,7 @@ Suggests:
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 URL: https://nowosad.github.io/colorblindcheck/
