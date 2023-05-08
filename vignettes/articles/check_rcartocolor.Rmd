@@ -189,6 +189,13 @@ Tropic = carto_pal(7, "ArmyRose")
 colorblindcheck::palette_check(Tropic, plot = TRUE)
 ```
 
+### Geyser
+
+```{r}
+Tropic = carto_pal(7, "Geyser")
+colorblindcheck::palette_check(Tropic, plot = TRUE)
+```
+
 ## Other
 
 ### Tropic
@@ -212,12 +219,6 @@ Tropic = carto_pal(7, "TealRose")
 colorblindcheck::palette_check(Tropic, plot = TRUE)
 ```
 
-### Geyser
-
-```{r}
-Tropic = carto_pal(7, "Geyser")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
-```
 
 ### Fall
 
