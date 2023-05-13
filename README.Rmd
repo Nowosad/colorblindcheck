@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/colorblindcheck)](https://CRAN.R-project.org/package=colorblindcheck)
-[![Travis build status](https://travis-ci.org/Nowosad/colorblindcheck.svg?branch=master)](https://travis-ci.org/Nowosad/colorblindcheck)
 [![Codecov test coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/colorblindcheck?branch=master)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
+[![R-CMD-check](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Deciding if a color palette is a colorblind friendly is a hard task.
