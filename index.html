@@ -95,7 +95,7 @@
 <li>
 <code><a href="reference/palette_check.html">palette_check()</a></code> - Creating summary statistics comparing the original input palette and simulations of color vision deficiencies: deuteranopia, protanopia, and tritanopia.</li>
 </ul>
-<p>The work in this package was inspired by a blog post <a href="https://www.vis4.net/blog/2018/02/automate-colorblind-checking/" class="external-link">I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here’s how it works</a> by <a href="https://twitter.com/driven_by_data" class="external-link">Gregor Aisch</a>.</p>
+<p>The work in this package was inspired by a blog post <a href="https://www.vis4.net/blog/2018/02/automate-colorblind-checking/" class="external-link">I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here’s how it works</a> by Gregor Aisch.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -111,7 +111,7 @@
 </h2>
 <p>The <strong>colorblindcheck</strong> accepts a vector of hexadecimal color descriptions as the input. It can be created using different existing R functions (e.g. <code><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow()</a></code>) or packages (e.g. <a href="https://cran.r-project.org/package=colorspace" class="external-link"><strong>colorspace</strong></a>, <a href="https://cran.r-project.org/package=RColorBrewer" class="external-link"><strong>RColorBrewer</strong></a>, <a href="https://cran.r-project.org/package=rcartocolor" class="external-link"><strong>rcartocolor</strong></a>, etc.).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://nowosad.github.io/colorblindcheck/" class="external-link">colorblindcheck</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jakubnowosad.com/colorblindcheck/" class="external-link">colorblindcheck</a></span><span class="op">)</span></span>
 <span><span class="va">rainbow_pal</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">7</span><span class="op">)</span></span>
 <span><span class="va">rainbow_pal</span></span>
 <span><span class="co">#&gt; [1] "#FF0000" "#FFDB00" "#49FF00" "#00FF92" "#0092FF" "#4900FF" "#FF00DB"</span></span></code></pre></div>
