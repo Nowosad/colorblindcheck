@@ -1,10 +1,10 @@
 citHeader("To cite colorblindcheck in publications, please use:")
 
-citEntry(entry = "manual",
+bibentry(bibtype = "Manual",
   author = c(person("Jakub", "Nowosad")),
   title = "Check Color Palettes for Problems with Color Vision Deficiency",
   year = "2019",
   note = "R package version 0.1.0",
-  url = "https://nowosad.github.io/colorblindcheck/",
-  textVersion = "Nowosad, J. (2018). colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency. R package version 0.1.0.0. https://nowosad.github.io/colorblindcheck/"
+  url = "https://jakubnowosad.com/colorblindcheck/",
+  textVersion = "Nowosad, J. (2019). colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency. R package version 0.1.0. https://jakubnowosad.com/colorblindcheck/"
 )

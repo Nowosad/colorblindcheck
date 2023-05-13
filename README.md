@@ -34,7 +34,7 @@ The work in this package was inspired by a blog post [I wrote some code
 that automatically checks visualizations for non-colorblind safe colors.
 Here’s how it
 works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
-by [Gregor Aisch](https://twitter.com/driven_by_data).
+by Gregor Aisch.
 
 ## Installation
 

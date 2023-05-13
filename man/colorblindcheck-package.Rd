@@ -11,7 +11,7 @@ Compare color palettes with simulations of color vision deficiencies - deuterano
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://nowosad.github.io/colorblindcheck/}
+  \item \url{https://jakubnowosad.com/colorblindcheck/}
   \item Report bugs at \url{https://github.com/Nowosad/colorblindcheck/issues}
 }
 
