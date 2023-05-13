@@ -1,9 +1,0 @@
-pandoc: 2.7.3
-pkgdown: 1.5.1
-pkgdown_sha: ~
-articles:
-  check_bivariate_pals: articles/check_bivariate_pals.html
-  check_rcartocolor: articles/check_rcartocolor.html
-  intro-to-colorblindcheck: intro-to-colorblindcheck.html
-last_built: 2020-08-14T11:11Z
-
