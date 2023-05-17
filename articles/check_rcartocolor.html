@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">colorblindcheck</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.3</span>
       </span>
     </div>
 
@@ -84,7 +84,7 @@
       <h1 data-toc-skip>Checking rcartocolor for colorblind friendly palettes</h1>
                         <h4 data-toc-skip class="author">Jakub Nowosad</h4>
             
-            <h4 data-toc-skip class="date">2023-05-13</h4>
+            <h4 data-toc-skip class="date">2023-05-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/Nowosad/colorblindcheck/blob/HEAD/vignettes/articles/check_rcartocolor.Rmd" class="external-link"><code>vignettes/articles/check_rcartocolor.Rmd</code></a></small>
       <div class="hidden name"><code>check_rcartocolor.Rmd</code></div>
@@ -367,8 +367,8 @@
 <h4 id="earth">Earth<a class="anchor" aria-label="anchor" href="#earth"></a>
 </h4>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Earth"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">Earth</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Earth"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Earth</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-23-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7   12.5245  21   21 12.524500  27.12465 42.52298</span></span>
@@ -380,8 +380,8 @@
 <h4 id="armyrose">ArmyRose<a class="anchor" aria-label="anchor" href="#armyrose"></a>
 </h4>
 <div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"ArmyRose"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ArmyRose</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"ArmyRose"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">ArmyRose</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-24-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7  10.75289  21   21 10.752894  31.11200 49.52187</span></span>
@@ -393,8 +393,8 @@
 <h4 id="geyser">Geyser<a class="anchor" aria-label="anchor" href="#geyser"></a>
 </h4>
 <div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Geyser"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">Geyser</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Geyser"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Geyser</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-25-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7  13.88224  21   21 13.882238  30.98809 48.71079</span></span>
@@ -423,8 +423,8 @@
 <h4 id="temps">Temps<a class="anchor" aria-label="anchor" href="#temps"></a>
 </h4>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Temps"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">Temps</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Temps"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Temps</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-27-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7  15.00693  21   21 15.006928  37.11484 67.19813</span></span>
@@ -436,8 +436,8 @@
 <h4 id="tealrose">TealRose<a class="anchor" aria-label="anchor" href="#tealrose"></a>
 </h4>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"TealRose"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">TealRose</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"TealRose"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">TealRose</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-28-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7  11.77803  21   21 11.778027  32.65683 58.37099</span></span>
@@ -449,8 +449,8 @@
 <h4 id="fall">Fall<a class="anchor" aria-label="anchor" href="#fall"></a>
 </h4>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Tropic</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Fall"</span><span class="op">)</span></span>
-<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Tropic</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">Fall</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/rcartocolor/man/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">7</span>, <span class="st">"Fall"</span><span class="op">)</span></span>
+<span><span class="fu">colorblindcheck</span><span class="fu">::</span><span class="fu"><a href="../reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">Fall</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="check_rcartocolor_files/figure-html/unnamed-chunk-29-1.png" width="576"></p>
 <pre><code><span><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist max_dist</span></span>
 <span><span class="co">#&gt; 1       normal 7  13.76708  21   21 13.767081  30.25280 50.40550</span></span>
