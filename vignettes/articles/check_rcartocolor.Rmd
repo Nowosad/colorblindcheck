@@ -178,22 +178,22 @@ display_carto_all(type = "diverging")
 ### Earth
 
 ```{r}
-Tropic = carto_pal(7, "Earth")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+Earth = carto_pal(7, "Earth")
+colorblindcheck::palette_check(Earth, plot = TRUE)
 ```
 
 ### ArmyRose
 
 ```{r}
-Tropic = carto_pal(7, "ArmyRose")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+ArmyRose = carto_pal(7, "ArmyRose")
+colorblindcheck::palette_check(ArmyRose, plot = TRUE)
 ```
 
 ### Geyser
 
 ```{r}
-Tropic = carto_pal(7, "Geyser")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+Geyser = carto_pal(7, "Geyser")
+colorblindcheck::palette_check(Geyser, plot = TRUE)
 ```
 
 ## Other
@@ -208,23 +208,23 @@ colorblindcheck::palette_check(Tropic, plot = TRUE)
 ### Temps
 
 ```{r}
-Tropic = carto_pal(7, "Temps")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+Temps = carto_pal(7, "Temps")
+colorblindcheck::palette_check(Temps, plot = TRUE)
 ```
 
 ### TealRose
 
 ```{r}
-Tropic = carto_pal(7, "TealRose")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+TealRose = carto_pal(7, "TealRose")
+colorblindcheck::palette_check(TealRose, plot = TRUE)
 ```
 
 
 ### Fall
 
 ```{r}
-Tropic = carto_pal(7, "Fall")
-colorblindcheck::palette_check(Tropic, plot = TRUE)
+Fall = carto_pal(7, "Fall")
+colorblindcheck::palette_check(Fall, plot = TRUE)
 ```
 
 # Qualitative
