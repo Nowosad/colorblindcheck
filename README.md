@@ -33,8 +33,8 @@ palette is colorblind friendly, including:
 The work in this package was inspired by a blog post [I wrote some code
 that automatically checks visualizations for non-colorblind safe colors.
 Here’s how it
-works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
-by Gregor Aisch.
+works](https://www.vis4.net/blog/automate-colorblind-checking) by Gregor
+Aisch.
 
 ## Installation
 
@@ -149,7 +149,7 @@ palette_dist(rainbow_pal, cvd = "pro")
   to](https://blog.datawrapper.de/colorblind-check/)
 - [I wrote some code that automatically checks visualizations for
   non-colorblind safe colors. Here’s how it
-  works](https://www.vis4.net/blog/2018/02/automate-colorblind-checking/)
+  works](https://www.vis4.net/blog/automate-colorblind-checking)
 - [Color Vision Deficiency
   Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
 - [Delta E: The Color
