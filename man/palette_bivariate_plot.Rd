@@ -19,6 +19,9 @@ Plot of the original input bivariate palette and simulations of color vision def
 }
 \examples{
 palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"))
+# Technically, "Sunset" from {rcartocolor} is not a bivariate palette,
+# an example using an actual bivariate palette would be the following:
+# palette_bivariate_plot(x = pals::brewer.seqseq1())
 }
 \seealso{
 palette_plot
