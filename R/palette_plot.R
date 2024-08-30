@@ -81,6 +81,9 @@ palette_plot = function(x, severity = 1){
 #'
 #' @examples
 #' palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"))
+#' # Technically, "Sunset" from {rcartocolor} is not a bivariate palette,
+#' # an example using an actual bivariate palette would be the following:
+#' # palette_bivariate_plot(x = pals::brewer.seqseq1())
 palette_bivariate_plot = function(x, severity = 1){
   deu = colorspace::deutan(x, severity = severity)
   pro = colorspace::protan(x, severity = severity)
