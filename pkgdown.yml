@@ -1,8 +1,8 @@
 pandoc: 2.9.2.1
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   articles/check_bivariate_pals: check_bivariate_pals.html
   articles/check_rcartocolor: check_rcartocolor.html
   intro-to-colorblindcheck: intro-to-colorblindcheck.html
-last_built: 2024-08-30T11:02Z
+last_built: 2024-10-10T11:04Z
