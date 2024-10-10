@@ -12,12 +12,12 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# colorblindcheck
+# colorblindcheck <img src="man/figures/logo.png" align="right" alt="" width="150" />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/colorblindcheck)](https://CRAN.R-project.org/package=colorblindcheck)
 [![Codecov test coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/colorblindcheck?branch=master)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
 [![R-CMD-check](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 

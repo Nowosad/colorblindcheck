@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# colorblindcheck
+# colorblindcheck <img src="man/figures/logo.png" align="right" alt="" width="150" />
 
 <!-- badges: start -->
 
@@ -10,7 +10,7 @@ status](https://www.r-pkg.org/badges/version/colorblindcheck)](https://CRAN.R-pr
 [![Codecov test
 coverage](https://codecov.io/gh/Nowosad/colorblindcheck/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/colorblindcheck?branch=master)
 [![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
+downloads](https://cranlogs.r-pkg.org/badges/colorblindcheck)](https://cran.r-project.org/package=colorblindcheck)
 [![R-CMD-check](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/colorblindcheck/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
