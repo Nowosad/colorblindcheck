@@ -50,7 +50,7 @@ palette_plot = function(x, severity = 1, show_hex = FALSE){
   
   if (show_hex) {
     axis(
-      side = 1, 
+      side = 3, 
       at = 0:(my_n - 1) + 0.5,
       labels = x,
       lwd = 0
