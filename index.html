@@ -85,6 +85,7 @@
 <div class="page-header"><h1 id="colorblindcheck-">colorblindcheck <img src="reference/figures/logo.png" align="right" alt="" width="150"><a class="anchor" aria-label="anchor" href="#colorblindcheck-"></a>
 </h1></div>
 <!-- badges: start -->
+
 <p>Deciding if a color palette is a colorblind friendly is a hard task. This cannot be done in an entirely automatic fashion, as the decision needs to be confirmed by visual judgments. The goal of <strong>colorblindcheck</strong> is to provide tools to decide if the selected color palette is colorblind friendly, including:</p>
 <ul>
 <li>
@@ -118,11 +119,11 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/palette_check.html">palette_check</a></span><span class="op">(</span><span class="va">rainbow_pal</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist  max_dist</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="co">#&gt; 1       normal 7  12.13226  21   21 12.132257  61.06471 107.63470</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="co">#&gt; 2 deuteranopia 7  12.13226  21   19  2.572062  44.29065  85.87461</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="co">#&gt; 3   protanopia 7  12.13226  21   17  3.647681  47.63882  83.28286</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="co">#&gt; 4   tritanopia 7  12.13226  21   20  2.025647  47.41585  83.77189</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">#&gt;           name n tolerance ncp ndcp  min_dist mean_dist  max_dist</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; 1       normal 7  12.13226  21   21 12.132257  61.06471 107.63470</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; 2 deuteranopia 7  12.13226  21   19  2.572062  44.29065  85.87461</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 3   protanopia 7  12.13226  21   17  3.647681  47.63882  83.28286</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co">#&gt; 4   tritanopia 7  12.13226  21   20  2.025647  47.41585  83.77189</span></span></code></pre></div>
 <p>The <code><a href="reference/palette_check.html">palette_check()</a></code> function returns a data.frame with 4 observations and 8 variables:</p>
 <ul>
 <li>
@@ -209,7 +210,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Jakub Nowosad <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-1057-3721" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Jakub Nowosad <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-1057-3721" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 </ul>
 </div>
 
@@ -234,7 +235,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
       </footer>
