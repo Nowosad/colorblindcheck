@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">colorblindcheck</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.4</span>
       </span>
     </div>
 
@@ -66,7 +66,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palette_bivariate_plot</span><span class="op">(</span><span class="va">x</span>, severity <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palette_bivariate_plot</span><span class="op">(</span><span class="va">x</span>, severity <span class="op">=</span> <span class="fl">1</span>, show_hex <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -79,6 +79,10 @@
 
 <dt id="arg-severity">severity<a class="anchor" aria-label="anchor" href="#arg-severity"></a></dt>
 <dd><p>Severity of the color vision defect, a number between 0 and 1</p></dd>
+
+
+<dt id="arg-show-hex">show_hex<a class="anchor" aria-label="anchor" href="#arg-show-hex"></a></dt>
+<dd><p>whether to display hexadecimal color descriptions in plot</p></dd>
 
 </dl></div>
     <div id="value">
@@ -94,6 +98,8 @@
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">palette_bivariate_plot</span><span class="op">(</span>x <span class="op">=</span> <span class="fu">rcartocolor</span><span class="fu">::</span><span class="fu"><a href="https://jakubnowosad.com/rcartocolor/reference/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">4</span>, <span class="st">"Sunset"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="palette_bivariate_plot-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">palette_bivariate_plot</span><span class="op">(</span>x <span class="op">=</span> <span class="fu">rcartocolor</span><span class="fu">::</span><span class="fu"><a href="https://jakubnowosad.com/rcartocolor/reference/carto_pal.html" class="external-link">carto_pal</a></span><span class="op">(</span><span class="fl">4</span>, <span class="st">"Sunset"</span><span class="op">)</span>, show_hex <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="palette_bivariate_plot-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># Technically, "Sunset" from {rcartocolor} is not a bivariate palette,</span></span></span>
 <span class="r-in"><span><span class="co"># an example using an actual bivariate palette would be the following:</span></span></span>
 <span class="r-in"><span><span class="co"># palette_bivariate_plot(x = pals::brewer.seqseq1())</span></span></span>
