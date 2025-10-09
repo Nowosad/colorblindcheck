@@ -30,11 +30,7 @@ palette is colorblind friendly, including:
   input palette and simulations of color vision deficiencies:
   deuteranopia, protanopia, and tritanopia.
 
-The work in this package was inspired by a blog post [I wrote some code
-that automatically checks visualizations for non-colorblind safe colors.
-Here’s how it
-works](https://www.vis4.net/blog/automate-colorblind-checking) by Gregor
-Aisch.
+<!-- The work in this package was inspired by a blog post [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works](https://www.vis4.net/blog/automate-colorblind-checking) by Gregor Aisch. -->
 
 ## Installation
 
@@ -146,10 +142,8 @@ palette_dist(rainbow_pal, cvd = "pro")
 ## References
 
 - [Datawrapper now checks your colors, so you don’t have
-  to](https://blog.datawrapper.de/colorblind-check/)
-- [I wrote some code that automatically checks visualizations for
-  non-colorblind safe colors. Here’s how it
-  works](https://www.vis4.net/blog/automate-colorblind-checking)
+  to](https://www.datawrapper.de/blog/colorblind-check/)
+  <!-- - [I wrote some code that automatically checks visualizations for non-colorblind safe colors. Here's how it works ](https://www.vis4.net/blog/automate-colorblind-checking) -->
 - [Color Vision Deficiency
   Emulation](http://colorspace.r-forge.r-project.org/articles/color_vision_deficiency.html)
 - [Delta E: The Color
