@@ -4,12 +4,14 @@
 \alias{palette_plot}
 \title{Plot Palette And Its Color Vision Deficiencies}
 \usage{
-palette_plot(x, severity = 1)
+palette_plot(x, severity = 1, show_hex = FALSE)
 }
 \arguments{
 \item{x}{A vector of hexadecimal color descriptions}
 
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
+
+\item{show_hex}{whether to display hexadecimal color descriptions in plot}
 }
 \value{
 A plot with the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
@@ -26,6 +28,7 @@ palette_plot(x = rcartocolor::carto_pal(7, "Sunset"))
 palette_plot(x = rcartocolor::carto_pal(11, "Safe"))
 palette_plot(x = rcartocolor::carto_pal(7, "Earth"))
 palette_plot(x = rcartocolor::carto_pal(11, "Vivid"))
+palette_plot(x = rcartocolor::carto_pal(11, "Vivid"), show_hex = TRUE)
 }
 \seealso{
 palette_bivariate_plot

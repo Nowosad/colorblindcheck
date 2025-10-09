@@ -6,6 +6,8 @@
 \alias{colorblindcheck-package}
 \title{colorblindcheck: Check Color Palettes for Problems with Color Vision Deficiency}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Compare color palettes with simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia. It includes calculation of distances between colors, and creating summaries of differences between a color palette and simulations of color vision deficiencies. This work was inspired by the blog post at \url{https://www.vis4.net/blog/automate-colorblind-checking}.
 }
 \seealso{

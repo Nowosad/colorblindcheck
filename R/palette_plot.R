@@ -4,7 +4,7 @@
 #'
 #' @param x A vector of hexadecimal color descriptions
 #' @param severity Severity of the color vision defect, a number between 0 and 1
-#' 
+#' @param show_hex whether to display hexadecimal color descriptions in plot
 #' @importFrom graphics par plot rect text
 #' 
 #' @seealso palette_bivariate_plot
@@ -21,8 +21,9 @@
 #' palette_plot(x = rcartocolor::carto_pal(11, "Safe"))
 #' palette_plot(x = rcartocolor::carto_pal(7, "Earth"))
 #' palette_plot(x = rcartocolor::carto_pal(11, "Vivid"))
+#' palette_plot(x = rcartocolor::carto_pal(11, "Vivid"), show_hex = TRUE)
 
-palette_plot = function(x, severity = 1){
+palette_plot = function(x, severity = 1, show_hex = FALSE){
   deu = colorspace::deutan(x, severity = severity)
   pro = colorspace::protan(x, severity = severity)
   tri = colorspace::tritan(x, severity = severity)
@@ -46,6 +47,15 @@ palette_plot = function(x, severity = 1){
     xlab = "",
     ylab = ""
   )
+  
+  if (show_hex) {
+    axis(
+      side = 3, 
+      at = 0:(my_n - 1) + 0.5,
+      labels = x,
+      lwd = 0
+    )
+  }
   
   for (i in seq_len(n_colors)) {
     rect(
@@ -98,10 +108,10 @@ palette_bivariate_plot = function(x, severity = 1){
   
   ncol = length(x)
   # if(missing(nx)) {
-    nx = sqrt(ncol)
+  nx = sqrt(ncol)
   # }
   # if(missing(ny)) {
-    ny = nx
+  ny = nx
   # }
   
   oldpar = par(mfrow = c(2, 2), mar = rep(1, 4))
@@ -116,6 +126,6 @@ palette_bivariate_plot = function(x, severity = 1){
       asp = 1
     )
   }
-
+  
 }
 
