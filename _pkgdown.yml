@@ -1,1 +1,5 @@
+url: https://jakubnowosad.com/colorblindcheck/
+template:
+  bootstrap: 5
+
 destination: docs
