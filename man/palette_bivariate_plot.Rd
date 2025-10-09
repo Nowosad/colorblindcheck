@@ -4,12 +4,14 @@
 \alias{palette_bivariate_plot}
 \title{Plot Bivariate Palette And Its Color Vision Deficiencies}
 \usage{
-palette_bivariate_plot(x, severity = 1)
+palette_bivariate_plot(x, severity = 1, show_hex = FALSE)
 }
 \arguments{
 \item{x}{A vector of hexadecimal color descriptions}
 
 \item{severity}{Severity of the color vision defect, a number between 0 and 1}
+
+\item{show_hex}{whether to display hexadecimal color descriptions in plot}
 }
 \value{
 A plot with the original input palette and simulations of color vision deficiencies - deuteranopia, protanopia, and tritanopia
@@ -19,6 +21,7 @@ Plot of the original input bivariate palette and simulations of color vision def
 }
 \examples{
 palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"))
+palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"), show_hex = TRUE)
 # Technically, "Sunset" from {rcartocolor} is not a bivariate palette,
 # an example using an actual bivariate palette would be the following:
 # palette_bivariate_plot(x = pals::brewer.seqseq1())

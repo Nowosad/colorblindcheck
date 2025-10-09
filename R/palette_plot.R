@@ -5,7 +5,7 @@
 #' @param x A vector of hexadecimal color descriptions
 #' @param severity Severity of the color vision defect, a number between 0 and 1
 #' @param show_hex whether to display hexadecimal color descriptions in plot
-#' @importFrom graphics par plot rect text
+#' @importFrom graphics par plot rect text axis
 #' 
 #' @seealso palette_bivariate_plot
 #'
@@ -53,7 +53,8 @@ palette_plot = function(x, severity = 1, show_hex = FALSE){
       side = 3, 
       at = 0:(my_n - 1) + 0.5,
       labels = x,
-      lwd = 0
+      lwd = 0,
+      cex.axis = 2/3
     )
   }
   
@@ -82,6 +83,7 @@ palette_plot = function(x, severity = 1, show_hex = FALSE){
 #'
 #' @param x A vector of hexadecimal color descriptions
 #' @param severity Severity of the color vision defect, a number between 0 and 1
+#' @param show_hex whether to display hexadecimal color descriptions in plot
 #' 
 #' @seealso palette_plot
 #'
@@ -91,10 +93,11 @@ palette_plot = function(x, severity = 1, show_hex = FALSE){
 #'
 #' @examples
 #' palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"))
+#' palette_bivariate_plot(x = rcartocolor::carto_pal(4, "Sunset"), show_hex = TRUE)
 #' # Technically, "Sunset" from {rcartocolor} is not a bivariate palette,
 #' # an example using an actual bivariate palette would be the following:
 #' # palette_bivariate_plot(x = pals::brewer.seqseq1())
-palette_bivariate_plot = function(x, severity = 1){
+palette_bivariate_plot = function(x, severity = 1, show_hex = FALSE){
   deu = colorspace::deutan(x, severity = severity)
   pro = colorspace::protan(x, severity = severity)
   tri = colorspace::tritan(x, severity = severity)
@@ -125,6 +128,20 @@ palette_bivariate_plot = function(x, severity = 1){
       main = labels[[i]],
       asp = 1
     )
+    if (show_hex) {
+      # Compute grid coordinates
+      x_coords = rep(seq(0, 1, length.out = nx), each = ny)
+      y_coords = rep(seq(0, 1, length.out = ny), times = nx)
+      
+      # Add hex labels (centered)
+      text(
+        x_coords,
+        y_coords,
+        labels = x,
+        cex = 0.6,
+        col = "black"
+      )
+    }
   }
   
 }
