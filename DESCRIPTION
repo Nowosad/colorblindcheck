@@ -26,6 +26,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.3
 Roxygen: list(markdown = TRUE)
-VignetteBuilder: knitr
+VignetteBuilder: knitr, rmarkdown
 URL: https://jakubnowosad.com/colorblindcheck/
 BugReports: https://github.com/Nowosad/colorblindcheck/issues
